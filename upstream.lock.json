@@ -1,0 +1,44 @@
+{
+  "schema_version": "shopping-agent-upstream-lock-v1",
+  "audited_at": "2026-10-24",
+  "reproduction": {
+    "repository": "https://github.com/YYHDBL/shopping-grpo-longhorizon",
+    "commit": "9140f0d699b2feef7d11b8cbbcadbf612877096b",
+    "license_status": "No LICENSE, COPYING or NOTICE found in the complete pinned repository tree; redistribution rights unresolved",
+    "embedded_environment": {
+      "upstream_repository": "https://github.com/ShopAgent-Team/ShopSimulator",
+      "upstream_base_commit": "51bb26012cee31aea7ac26177c5ffe807026ac07",
+      "source_commit": "9ecba272963960ab4a10e1a781bd05cd7634ce20",
+      "environment_version": "shopsimulator-environment-v2.1",
+      "reward_version": "shopsimulator-reward-v3",
+      "observation_version": "shopping-observation-v2",
+      "tool_version": "shopping-tools-v2",
+      "product_data_sha256": "57b10950a0064d16c81535a1d764a75879a508d250dde8a2a1787c5e6045559f",
+      "compressed_product_path": "environments/ShopSimulator/shop_env/data/fine_items_eval_train_all.json.gz",
+      "compressed_product_bytes": 19923433
+    },
+    "evaluation": {
+      "name": "Final-200-Clean",
+      "path": "data/evaluation/tasks.jsonl",
+      "task_count": 200,
+      "sha256": "d99112a20ef47534c27a32e4b38229bf048dcc6b06fef2e3e919aac3093662f5",
+      "use_for_prompt_tuning": false,
+      "executed_in_this_delivery": false
+    }
+  },
+  "official_reference": {
+    "repository": "https://github.com/ShopAgent-Team/ShopSimulator",
+    "commit": "475837e7a51737c44c0a9f79f9459be1e79060fa",
+    "license_status": "No LICENSE, COPYING or NOTICE found in the complete pinned repository tree; redistribution rights unresolved",
+    "used_as_runtime": false
+  },
+  "vendored_upstream_code": false,
+  "vendored_upstream_data": false,
+  "validation": {
+    "source_review": "completed via connected GitHub reads at pinned refs",
+    "shell_clone": "completed at pinned commit after granting command network capability; earlier proxy connection failure was sandbox network isolation",
+    "real_shopsimulator_execution": "manual protocol smoke passed on development task 53: reset/search/open/release; no model call, no purchase or benchmark evaluation",
+    "macos_execution": "not validated; current execution host is Linux x86_64",
+    "environment_only_install": "Python 3.10.22; original environment requirements installed; product SHA-256 verified; SQLite index built for 23421 products"
+  }
+}

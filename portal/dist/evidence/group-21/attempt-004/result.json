@@ -1,0 +1,113 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "procure-test-01",
+  "query": "Buy one black, wireless, multi-device keyboard; one wireless, multi-device, lightweight mouse. Keep the combined price at or below CNY 350. Inspect product details before adding items. Keep exactly one of each requested category and no other items. Open the shopping list and check quantities and the total before finishing.",
+  "model": {
+    "provider": "api",
+    "name": "deepseek-flash"
+  },
+  "runtime": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "page_memory",
+    "recovery": "adaptive"
+  },
+  "benchmark_case": {
+    "id": "procure-test-01",
+    "split": "heldout",
+    "seed": 7,
+    "fault": "stockout",
+    "catalog_fingerprint": "5381728fb3f280c2c1b77b5b8389292ae931375a0ba4cf5cd1062ddd41688ffd",
+    "dataset_fingerprint": "77d0f46fd5a2705e1256f4fb98725729e1c1dd1f7414b7d26ff080b9c18e07e2",
+    "benchmark_fingerprint": "e65943817c363c8e43d517f0b45ac5168d91be048fc2623a7babcb4da04f6414",
+    "benchmark": "shoptrace-procurement-v1"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8798/sandbox/procurement/?sid=c0a0523b6f0d3963ce02cd61a0749650",
+    "allowed_origins": [
+      "http://127.0.0.1:8798"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8798": [
+        "/sandbox/procurement/"
+      ]
+    }
+  },
+  "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+  "run_id": "da9eafc9fca14247847fd6cabbe95eaf",
+  "source": "browser_model",
+  "created_at": "2026-10-26T11:34:34.589675+00:00",
+  "completed_at": "2026-10-26T11:34:52.165302+00:00",
+  "status": "cancelled",
+  "termination_reason": "user_cancelled",
+  "steps": 10,
+  "model_calls": 11,
+  "elapsed_seconds": 17.5687,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "result": {
+    "success": null,
+    "reason": "not_finished",
+    "benchmark": "shoptrace-procurement-v1",
+    "metrics": {
+      "duplicates": 0,
+      "duplicate_peak": 0,
+      "fault_triggered": false,
+      "add_attempts": 0,
+      "add_retries": 0,
+      "duplicate_adds": 0,
+      "uncertain_adds": 0,
+      "cart_checks": 0,
+      "inspected_products": 4,
+      "cart_count": 0,
+      "total_cents": 0
+    }
+  },
+  "error": {
+    "kind": "cancelled",
+    "message": "cancelled by user; in-flight action outcome may be unknown"
+  },
+  "started_at": "2026-10-26T11:34:34.596675+00:00",
+  "protocol_version": "shoptrace-procurement-v1",
+  "prompt_hash": "8ef71500080941ea8b0b84bfb8441fda201a7c225ccdc5379de119ecbdaa6b83",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "page_memory"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "memory_policy": {
+    "version": "observed-pages-v1",
+    "pages": 0,
+    "characters": 0,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "recovery_policy": {
+    "mode": "adaptive",
+    "version": "visible-feedback-v1",
+    "automatic_actions": false
+  },
+  "source_unchanged": true,
+  "memory_stats": {
+    "pages": 7,
+    "characters": 5105,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "model_responses": 10
+}

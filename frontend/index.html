@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="ShopTrace: inspect shopping agent tasks, replay trajectories and compare runs.">
+  <title>ShopTrace — Agent Workspace</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M12 17h24l2 22H10l2-22Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 19v-7a6 6 0 0 1 12 0v7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m17 31 6-6 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="31" r="2.3" fill="currentColor"/><circle cx="23" cy="25" r="2.3" fill="currentColor"/><circle cx="31" cy="31" r="2.3" fill="currentColor"/></svg></span>
+      <div><strong><span class="brand-en">ShopTrace</span></strong><small>SHOPPING AGENT WORKSPACE</small></div>
+    </div>
+    <nav aria-label="Main navigation"><button class="nav-button active" data-view="workspace">Workspace</button><button class="nav-button" data-view="comparison">Compare runs</button><button class="nav-button" data-view="evaluation">Evaluation</button></nav>
+    <div class="header-right"><span id="connection" class="connection"><i></i>Connecting</span><button id="import-button" class="button subtle">Import trace</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+  </header>
+
+  <div id="notice" class="notice" role="status" hidden></div>
+  <main>
+    <section id="workspace-view" class="view">
+      <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> SHOPPING · TRACE · COMPARE</p><h1>Follow every <span>shopping decision.</span></h1><p>Inspect each agent action, from the request to the product.</p></div><div id="mode-badge" class="badge amber">Fixture test</div></div>
+      <div class="workspace-grid">
+        <aside class="panel setup-panel">
+          <div class="panel-heading"><h2>Task setup</h2><span class="index-label">01</span></div>
+          <form id="run-form">
+            <label for="mode">Environment</label><select id="mode"><option value="fixture">Fixture environment</option><option value="shopsimulator">ShopSimulator · preset tasks</option></select>
+            <p id="mode-description" class="field-note">Check the interface and task flow.</p>
+            <div id="fixture-task-field"><label for="task">Test task</label><select id="task"></select><div id="task-query" class="query-box">Loading tasks…</div></div>
+            <div id="live-task-field" hidden><label for="task-id">Preset task_id</label><input id="task-id" type="number" min="0" step="1" placeholder="e.g. 8187"><p class="field-note">The environment supplies the task. Change task_id to select another task.</p></div>
+            <div class="field-pair"><div><label for="provider">Provider</label><select id="provider"><option value="scripted">Test script</option><option value="api">API model</option></select></div><div><label for="stage">Model stage</label><select id="stage"><option value="other">Other</option><option value="base">Base</option><option value="sft">SFT</option><option value="rl">RL</option></select></div></div>
+            <label for="model-name">Model name</label><input id="model-name" value="fixture-script" maxlength="160" placeholder="Uses server LLM_MODEL"><p class="field-note">Select a model stage if relevant.</p>
+            <details class="budget-details"><summary>Run limits <span>Per run</span></summary><div class="field-pair"><div><label for="max-steps">Steps</label><input id="max-steps" type="number" value="35" min="1" max="100"></div><div><label for="max-seconds">Time / seconds</label><input id="max-seconds" type="number" value="120" min="5" max="3600"></div></div><div class="field-pair"><div><label for="max-calls">Model calls</label><input id="max-calls" type="number" value="35" min="1" max="100"></div><div><label for="max-output">Output tokens / call</label><input id="max-output" type="number" value="512" min="32" max="4096"></div></div></details>
+            <button id="start-button" class="button primary full" type="submit"><span aria-hidden="true">▶</span> Run fixture test</button><p id="start-hint" class="field-note"></p>
+          </form>
+          <div class="section-divider"></div><div class="panel-heading small"><h2>Runs</h2><button id="refresh-runs" class="icon-button" aria-label="Refresh runs">↻</button></div><div id="run-list" class="run-list"><p class="empty-small">No runs yet</p></div>
+        </aside>
+
+        <section class="panel trajectory-panel">
+          <div class="panel-heading"><div><h2>Trace inspector</h2><p id="run-subtitle" class="panel-subtitle">Start a task or import a saved trace</p></div><div class="inline-actions"><button id="export-button" class="button subtle compact" disabled>Export</button><button id="cancel-button" class="button danger compact" hidden>Stop run</button></div></div>
+          <div id="run-summary" class="run-summary" hidden></div>
+          <div id="trajectory-empty" class="empty-state"><div class="empty-illustration" aria-hidden="true"><span>⌕</span><i></i><i></i><i></i></div><h3>Start with a task</h3><p>Search, inspect products and choose options.<br>Replay model inputs, tool calls and environment responses in order.</p><div class="empty-pills"><span>No CUDA required</span><span>Local records</span><span>Offline replay</span></div></div>
+          <div id="trajectory-content" hidden>
+            <div class="replay-toolbar"><button id="previous-event" class="icon-button" aria-label="Previous event">‹</button><button id="play-events" class="button subtle compact">▶ Replay</button><button id="next-event" class="icon-button" aria-label="Next event">›</button><input id="event-range" type="range" min="0" max="0" value="0" aria-label="Trace events"><span id="event-position" class="mono">0 / 0</span><select id="play-speed" aria-label="Replay speed"><option value="1500">1×</option><option value="750">2×</option><option value="375">4×</option></select></div>
+            <div class="replay-progress-row"><div id="replay-progress" class="replay-progress" role="progressbar" aria-label="Replay progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div><span id="replay-progress-label" class="mono">0%</span></div>
+            <p class="replay-note">Replay saved events in order.</p>
+            <div class="observation-heading"><span class="eyebrow">ACTOR VISIBLE</span><span id="event-label" class="badge neutral">Observation</span></div><div id="observation" class="observation" tabindex="0"></div>
+            <details class="payload-details"><summary>View raw event</summary><pre id="event-payload"></pre></details>
+            <div class="timeline-heading"><h3>Event timeline</h3><span id="event-count" class="muted">0 events</span></div><div id="event-list" class="event-list" aria-label="Trace events"></div>
+          </div>
+        </section>
+
+        <aside class="panel evidence-panel"><div class="panel-heading"><h2>Results and notes</h2><span class="index-label">03</span></div><div class="evidence-intro"><span class="tiny-square"></span><p>Inspect page records, results and notes.</p></div><div id="result-panel" class="result-panel"><p class="empty-small">Results appear when the run ends.</p></div>
+          <div class="section-divider"></div><h3>Failure notes</h3><p class="field-note">Add a note to the selected event.</p><form id="annotation-form"><label for="annotation-category">Issue type</label><select id="annotation-category"><option value="evidence">Evidence check</option><option value="retrieval">Search</option><option value="memory">Memory</option><option value="specification">Option selection</option><option value="tool">Tool execution</option><option value="environment">Environment</option><option value="scoring">Scoring</option><option value="other">Other</option></select><label for="annotation-note">Note</label><textarea id="annotation-note" rows="3" maxlength="2000" placeholder="Describe the issue and relevant event…"></textarea><button id="save-annotation" class="button secondary full" disabled>Save note</button></form><div id="annotation-list" class="annotation-list"></div>
+          <div class="section-divider"></div><div class="system-note"><h3>About this run</h3><p>Fixture results and environment rewards are reported separately.</p><p>API keys stay on the server.</p><span id="upstream-info" class="mono">Loading version…</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="comparison-view" class="view" hidden><div class="page-heading"><div><p class="eyebrow">PAIRED COMPARISON</p><h1>Compare runs under matched conditions.</h1><p>Compare two runs of one task and review their model, budget and strategy.</p></div></div><div class="panel wide-panel"><form id="compare-form" class="comparison-form"><div><label for="compare-left">Run A</label><select id="compare-left"></select></div><div class="comparison-arrow" aria-hidden="true">↔</div><div><label for="compare-right">Run B</label><select id="compare-right"></select></div><button class="button primary">Compare</button></form><div id="comparison-result" class="comparison-result"><p class="empty-small">Choose two runs of the same task for a paired comparison.</p></div></div></section>
+
+    <section id="evaluation-view" class="view" hidden><div class="page-heading"><div><p class="eyebrow">EVALUATION & PROVENANCE</p><h1>Explore the results behind each run.</h1><p>Review outcomes, execution errors and unknown results.</p></div><button id="refresh-evaluation" class="button secondary">Refresh report</button></div><div class="panel wide-panel"><p class="evaluation-callout">Fixtures are counted separately. Success rates require valid results.</p><div id="evaluation-runs" class="evaluation-runs"></div><button id="evaluate-selected" class="button primary">Summarize selected runs</button><div id="evaluation-result" class="report-output"></div></div></section>
+  </main>
+  <footer><span><strong>ShopTrace</strong><span class="footer-separator">/</span>Shopping decisions, step by step</span><span>Runs · Compare runs · Evaluation</span></footer>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

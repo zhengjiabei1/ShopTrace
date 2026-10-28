@@ -1,0 +1,128 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "procure-dev-01",
+  "query": "Buy one wireless, multi-device, quiet keyboard; one wireless, quiet, lightweight mouse. Keep the combined price at or below CNY 350. Inspect product details before adding items. Keep exactly one of each requested category and no other items. Open the shopping list and check quantities and the total before finishing.",
+  "model": {
+    "provider": "api",
+    "name": "deepseek-flash"
+  },
+  "runtime": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "page_memory",
+    "recovery": "verify"
+  },
+  "benchmark_case": {
+    "id": "procure-dev-01",
+    "split": "development",
+    "seed": 7,
+    "fault": "none",
+    "catalog_fingerprint": "5381728fb3f280c2c1b77b5b8389292ae931375a0ba4cf5cd1062ddd41688ffd",
+    "dataset_fingerprint": "77d0f46fd5a2705e1256f4fb98725729e1c1dd1f7414b7d26ff080b9c18e07e2",
+    "benchmark_fingerprint": "e65943817c363c8e43d517f0b45ac5168d91be048fc2623a7babcb4da04f6414",
+    "benchmark": "shoptrace-procurement-v1"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8798/sandbox/procurement/?sid=735275b9f463b53b62f3e05a213834bd",
+    "allowed_origins": [
+      "http://127.0.0.1:8798"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8798": [
+        "/sandbox/procurement/"
+      ]
+    }
+  },
+  "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+  "run_id": "27051bc30ff348848d48a3f988e49797",
+  "source": "browser_model",
+  "created_at": "2026-10-26T11:14:43.948297+00:00",
+  "completed_at": "2026-10-26T11:15:03.898875+00:00",
+  "status": "completed",
+  "termination_reason": "agent_finished",
+  "steps": 13,
+  "model_calls": 13,
+  "elapsed_seconds": 19.9426,
+  "usage": {
+    "input_tokens": 51558,
+    "output_tokens": 602
+  },
+  "result": {
+    "benchmark": "shoptrace-procurement-v1",
+    "success": true,
+    "reason": "The products, quantities, and combined price meet the requirements.",
+    "evidence": [
+      {
+        "source": "visible_cart_dom",
+        "id": "pm02",
+        "qty": 1,
+        "cents": 6800,
+        "text": "◉\nSHOPTRACE / Mouse\nMouse\nDune Mouse\nColor\nWhite\nConnection\nWireless\nQuiet\nYes\nMulti-device\nNo\nLightweight\nYes\nStock\n8 available\n\nQuantity: 1\n\n−\n+\nRemove\nCNY 68.00\n\nCNY 68.00 each"
+      },
+      {
+        "source": "visible_cart_dom",
+        "id": "pk07",
+        "qty": 1,
+        "cents": 20200,
+        "text": "⌨\nSHOPTRACE / Keyboard\nKeyboard\nGlen Keyboard\nColor\nBlack\nConnection\nWireless\nQuiet\nYes\nMulti-device\nYes\nCompact\nYes\nStock\n8 available\n\nQuantity: 1\n\n−\n+\nRemove\nCNY 202.00\n\nCNY 202.00 each"
+      }
+    ],
+    "metrics": {
+      "duplicates": 0,
+      "duplicate_peak": 0,
+      "fault_triggered": false,
+      "add_attempts": 2,
+      "add_retries": 0,
+      "duplicate_adds": 0,
+      "uncertain_adds": 0,
+      "cart_checks": 1,
+      "inspected_products": 4,
+      "cart_count": 2,
+      "total_cents": 27000
+    },
+    "scope": "Checked against the session catalog, cart, and visible shopping list.",
+    "outcome_kind": "procurement_verified"
+  },
+  "error": null,
+  "started_at": "2026-10-26T11:14:43.956293+00:00",
+  "protocol_version": "shoptrace-procurement-v1",
+  "prompt_hash": "3aeff79d426f4a027ebaf16ab295d25173be4890bfd11cfa0a488787b8422bbc",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "page_memory"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "memory_policy": {
+    "version": "observed-pages-v1",
+    "pages": 0,
+    "characters": 0,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "recovery_policy": {
+    "mode": "verify",
+    "version": "visible-feedback-v1",
+    "automatic_actions": false
+  },
+  "source_unchanged": true,
+  "memory_stats": {
+    "pages": 8,
+    "characters": 5927,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "model_responses": 13
+}

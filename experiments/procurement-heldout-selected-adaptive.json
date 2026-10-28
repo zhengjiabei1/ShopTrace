@@ -1,0 +1,77 @@
+{
+  "schema_version": "shoptrace.procurement-plan.v1",
+  "name": "procurement-heldout-template",
+  "split": "heldout",
+  "benchmark": "shoptrace-procurement-v1",
+  "model": "deepseek-flash",
+  "budgets": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512
+  },
+  "cases": [
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "ack_lost",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "no_effect",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "stockout",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "ack_lost",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "no_effect",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "stockout",
+      "recovery": "adaptive",
+      "context_mode": "page_memory"
+    }
+  ],
+  "selection": {
+    "factor": "recovery",
+    "selected": "adaptive",
+    "report_hash": "947fc3d0cac49a603d6fbb7b37ed380c3225229e24140c99a52f6b37e02e00f1",
+    "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+    "decision_hash": "99cf4c76da5533da6019f63d86c1c579d1096e7ba47c3572215721bea15ecd49"
+  }
+}

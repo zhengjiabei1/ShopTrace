@@ -1,0 +1,30 @@
+services:
+  shoptrace:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    # Publish only to the host's HTTPS reverse proxy.
+    ports:
+      - "127.0.0.1:8080:8080"
+    env_file:
+      - runtime.env
+    environment:
+      WEBAGENT_DATA_DIR: /data
+    volumes:
+      - shoptrace-data:/data
+    shm_size: 256mb
+    mem_limit: 2g
+    cpus: 2
+    init: false
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  shoptrace-data:

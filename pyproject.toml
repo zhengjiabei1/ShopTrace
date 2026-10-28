@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shopping-agent-lab"
+version = "1.0.0"
+description = "A DOM-grounded browser agent for synthetic shopping tasks"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Jiabei Zheng"}]
+requires-python = ">=3.11"
+keywords = ["web-agent", "browser-automation", "playwright", "llm", "shopping", "evaluation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["fastapi==0.141.1", "uvicorn==0.52.1", "httpx==0.28.1", "pydantic==2.13.4"]
+
+[project.optional-dependencies]
+browser = ["playwright==1.62.0"]
+dev = ["pillow==13.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/zhengjiabei1/shopping_agent"
+Repository = "https://github.com/zhengjiabei1/shopping_agent"
+Issues = "https://github.com/zhengjiabei1/shopping_agent/issues"
+
+[tool.setuptools.packages.find]
+include = ["lab*", "webagent*"]
+
+[tool.setuptools.package-data]
+webagent = ["frontend/*", "sandbox_assets/*", "case_assets/*", "proc_assets/*"]

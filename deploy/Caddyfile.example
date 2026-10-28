@@ -1,0 +1,5 @@
+# Replace with the same host used in WEBAGENT_PUBLIC_ORIGIN. Run Caddy on the
+# host, or adapt its upstream to the Compose service name in a private network.
+shoptrace.example.com {
+    reverse_proxy 127.0.0.1:8080
+}

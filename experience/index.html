@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="ShopTrace experience: compare sample shopping choices, review the evidence and save feedback in your browser.">
+  <title>ShopTrace · Experience</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="ShopTrace experience home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M12 17h24l2 22H10l2-22Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 19v-7a6 6 0 0 1 12 0v7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="m17 31 6-6 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="31" r="2.3" fill="currentColor"/><circle cx="23" cy="25" r="2.3" fill="currentColor"/><circle cx="31" cy="31" r="2.3" fill="currentColor"/></svg></span><span><strong>ShopTrace</strong><small>Experience</small></span></a>
+    <div class="header-actions"><button id="records-button" class="text-button">My records <span id="record-count" class="count">0</span></button><button id="suggestion-button" class="text-button suggestion-button">Suggest a scenario</button></div>
+  </header>
+  <main>
+    <div class="demo-notice"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Sample scenarios</strong><span>Compare candidates and share your judgment.</span></p></div>
+    <nav class="journey" aria-label="Experience progress"><ol><li class="current" data-stage="1" aria-current="step"><span>1</span>Choose</li><li data-stage="2"><span>2</span>Explore</li><li data-stage="3"><span>3</span>Review</li></ol></nav>
+    <section id="selection-view" class="selection-view" tabindex="-1">
+      <div class="intro"><p class="eyebrow">What matters when you shop?</p><h1>See how a choice is made.<br class="mobile-break"> Tell us what you think.</h1><p>Choose a familiar shopping scenario and compare the products and evidence.<br>No technical knowledge needed: decide whether the information supports the choice.</p></div>
+      <div id="scenario-list" class="scenario-list" aria-label="Shopping scenarios"></div>
+      <p class="selection-note">Your overall preference has no single right answer. Check each condition against the evidence; questions are welcome.</p>
+    </section>
+    <section id="experience-view" class="experience-view" hidden>
+      <button id="back-to-scenarios" class="text-button back-button">← Choose another scenario</button>
+      <div class="scenario-heading"><p class="eyebrow">The shopping request</p><h1 id="scenario-title" tabindex="-1"></h1><p id="scenario-need"></p><div id="requirement-pills" class="requirement-pills"></div></div>
+      <section class="process-panel" aria-labelledby="process-heading"><div class="section-heading"><h2 id="process-heading">Follow the selection process</h2><span id="step-position" class="step-position"></span></div><ol id="process-steps" class="process-steps"></ol><div class="process-navigation"><p id="process-hint">Continue at your own pace.</p><button id="step-next" class="button primary">Continue <span aria-hidden="true">→</span></button></div></section>
+      <section class="candidates-section" aria-labelledby="candidates-heading"><div class="section-heading"><div><p class="eyebrow">Two candidate products</p><h2 id="candidates-heading">Compare the evidence side by side.</h2></div><span class="subtle-tag">Sample products</span></div><div class="candidate-tabs" role="tablist" aria-label="Switch candidate product"><button id="candidate-tab-a" role="tab" aria-selected="true" aria-controls="candidate-a" data-candidate="a">Candidate A</button><button id="candidate-tab-b" role="tab" aria-selected="false" aria-controls="candidate-b" data-candidate="b">Candidate B</button></div><div id="candidate-list" class="candidate-list"></div><p class="candidate-note">Review the information, then assess each condition.</p></section>
+      <section id="review-section" class="review-section" hidden aria-labelledby="review-heading">
+        <div class="section-heading"><div><p class="eyebrow">Your turn</p><h2 id="review-heading" tabindex="-1">How do these two options compare?</h2></div></div><p class="review-intro">Use the information shown. “Not enough information” is a useful answer too.</p>
+        <form id="review-form" novalidate><div id="judgment-list" class="judgment-list"></div><fieldset class="preference-field"><legend>Which option would you choose?</legend><div class="preference-options"><label><input type="radio" name="preference" value="a"><span>Candidate A</span></label><label><input type="radio" name="preference" value="b"><span>Candidate B</span></label><label><input type="radio" name="preference" value="neither"><span>Neither</span></label><label><input type="radio" name="preference" value="unsure"><span>Not sure</span></label></div></fieldset><label class="comment-label" for="feedback-comment">Anything else?<span>Optional</span></label><textarea id="feedback-comment" rows="4" maxlength="1000" placeholder="What information is missing, or which step would you question?"></textarea><div id="review-error" class="form-error" role="alert" hidden></div><div class="save-area"><div><strong>Keep your feedback here.</strong><p>Saved only in this browser. It has not been sent to the project team.</p></div><button id="save-feedback" class="button primary" type="submit">Save on this device <span aria-hidden="true">↓</span></button></div></form>
+      </section>
+      <section id="saved-panel" class="saved-panel" tabindex="-1" hidden aria-live="polite"><span class="saved-check" aria-hidden="true">✓</span><h2>Your feedback is saved on this device.</h2><p><strong>It has not been sent to the project team.</strong><br>You can copy a summary and share it with the project owner yourself.</p><div class="saved-actions"><button id="copy-summary" class="button primary">Copy summary</button><button id="try-again" class="button secondary">Try another scenario</button></div><p id="copy-status" class="copy-status" role="status"></p><textarea id="summary-fallback" class="summary-fallback" readonly aria-label="Summary for manual copying" hidden></textarea></section>
+    </section>
+    <p id="app-message" class="app-message" role="status" hidden></p>
+    <noscript><p class="app-message">Enable JavaScript to continue.</p></noscript>
+  </main>
+  <footer><div><strong>ShopTrace · Experience</strong><p>Explore the selection process and share your view.</p></div><div class="footer-links"><span>Sample demo · Feedback stays on this device</span></div></footer>
+  <dialog id="details-dialog" aria-labelledby="details-title"><div class="dialog-header"><h2 id="details-title">Candidate product information</h2><button class="dialog-close icon-button" aria-label="Close product details">×</button></div><div id="details-content"></div><button class="dialog-close button secondary full">Back to comparison</button></dialog>
+  <dialog id="records-dialog" aria-labelledby="records-title"><div class="dialog-header"><h2 id="records-title">My device records</h2><button class="dialog-close icon-button" aria-label="Close records">×</button></div><p class="dialog-note">Records stay in this browser and have not been sent to the team. Changing devices or clearing browser data may remove them.</p><div id="records-list"></div><details class="export-details"><summary>More ways to save</summary><p>Download a feedback file to keep a copy or share it yourself.</p><button id="export-feedback" class="button secondary">Export feedback file</button></details></dialog>
+  <dialog id="suggestion-dialog" aria-labelledby="suggestion-title"><div class="dialog-header"><h2 id="suggestion-title">What shopping scenario would you like to try?</h2><button class="dialog-close icon-button" aria-label="Close suggestions">×</button></div><p class="dialog-note">Describe the product, budget and conditions that matter to you. Your suggestion stays on this device.</p><form id="suggestion-form"><label for="suggestion-need">Your scenario idea</label><textarea id="suggestion-need" rows="5" maxlength="1500" required placeholder="For example: a bedside lamp for CNY 200 or less, with adjustable brightness."></textarea><p id="suggestion-status" class="copy-status" role="status"></p><button class="button primary full" type="submit">Save suggestion on this device</button><p class="local-note">Not sent to the project team.</p></form></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

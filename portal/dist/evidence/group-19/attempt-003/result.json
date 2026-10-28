@@ -1,0 +1,74 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "browser-powerbank-spec",
+  "query": "Find a black 10,000 mAh power bank with USB-C, a maximum output of at least 20 W, and a price no higher than CNY 150. Add it to the shopping list, then open the list and keep only that item.",
+  "model": {
+    "provider": "browser_smoke",
+    "name": "fixed-browser-smoke"
+  },
+  "runtime": {
+    "max_steps": 35,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "full_history"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8775/sandbox/",
+    "allowed_origins": [
+      "http://127.0.0.1:8775"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8775": [
+        "/sandbox/"
+      ]
+    }
+  },
+  "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+  "run_id": "ea84eff8e5e24a36b473c94ce4d9f684",
+  "source": "browser_smoke",
+  "created_at": "2026-10-26T19:09:24.770293+00:00",
+  "completed_at": "2026-10-26T19:09:26.422522+00:00",
+  "status": "completed",
+  "termination_reason": "agent_finished",
+  "steps": 6,
+  "model_calls": 0,
+  "elapsed_seconds": 1.6483,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "result": {
+    "benchmark": "shoptrace-browser-sandbox-v1",
+    "success": true,
+    "reason": "The listed item, variant, and price meet the requirements.",
+    "evidence": [
+      {
+        "source": "visible_cart_dom",
+        "product_id": "p-fast",
+        "color": "Black",
+        "capacity": "",
+        "price": "149",
+        "text": "ϟ\nProduct illustration\nSample Swift Power Bank\nColor\nBlack\nNominal capacity\n10,000 mAh\nMaximum output\n20 W\nPort\nUSB-C\nWeight\n205 g\n\nQuantity: 1\n\nCNY 149.00\nRemove"
+      }
+    ],
+    "scope": "Checked against the local catalog and current page.",
+    "outcome_kind": "cart_verified"
+  },
+  "error": null,
+  "started_at": "2026-10-26T19:09:24.774243+00:00",
+  "protocol_version": "shoptrace-browser-v1",
+  "prompt_hash": "7a86ac3c8cf41ead7ca0d0ed1ae19bb64dc00e549e1be8509dff916256d1183b",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "full_history"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "source_unchanged": true,
+  "model_responses": 0
+}

@@ -1,0 +1,7 @@
+WEBAGENT_CHROMIUM_PATH="/path/to/chrome" python -m unittest discover -s tests
+Ran 256 tests in 31.428s
+OK
+
+python -m unittest discover -s portal -p "test_*.py"
+Ran 6 tests in 0.029s
+OK

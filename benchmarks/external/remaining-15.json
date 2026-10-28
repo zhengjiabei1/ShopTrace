@@ -1,0 +1,188 @@
+{
+  "schema_version": "shoptrace.external-benchmark.v1",
+  "name": "webvoyager-readonly-15-remaining",
+  "upstream": {
+    "repository": "https://github.com/MinorJerry/WebVoyager",
+    "license": "Apache-2.0",
+    "task_file": "data/WebVoyager_data.jsonl",
+    "task_count": 643
+  },
+  "selection_rule": "Read-only information-seeking tasks across eight sites. No cart, booking, login, upload, or purchase actions. Each task is manually graded against the page state observed on the run date.",
+  "collected_at": "2026-10-28",
+  "grader": "manual",
+  "notes": [
+    "Not leaderboard-compatible: the upstream WebVoyager protocol allows writes and uses an LLM judge.",
+    "Live pages change; re-check snapshot tasks before each run.",
+    "A run that finishes with blocked or no_suitable_product is not automatically a failure."
+  ],
+  "task_count": 15,
+  "source_manifest": "webvoyager-readonly-30.json",
+  "selection_note": "Complement of the clean-site pilot: GitHub, Coursera, Allrecipes, the remaining Wolfram tasks, and arXiv--10. These are reported separately because preflight found CDN degradation or content blocking on several sites.",
+  "tasks": [
+    {
+      "id": "Wolfram Alpha--1",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Give a constraint on the set of inequalities for the inner region of the pentagram.",
+      "grading": "manual",
+      "rubric": "Gives a constraint or system describing the inner region of a pentagram; the answer must be a mathematical result, not a page summary.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--4",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Pack 24 circles in a circle radius r. Compare Densest known packing and Square packing. Then tell me the radius of the inner circles.",
+      "grading": "manual",
+      "rubric": "Reports the inner-circle radius for 24 circles packed in a circle, and distinguishes the densest-known and square packings.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--5",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Show the solution of y\"(z) + sin(y(z)) = 0 from wolframalpha.",
+      "grading": "manual",
+      "rubric": "Gives the solution to the stated ODE, including the independent variable and any constants Wolfram Alpha reports.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--11",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Show the electrical resistivity of UNS A92024 and UNS G10800 at 20 degrees Celsius.",
+      "grading": "manual",
+      "rubric": "Reports the electrical resistivity of both UNS A92024 and UNS G10800 at 20 C, with units.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--3",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Find out how much more package storage the Enterprise version has over Team in GitHub Pricing.",
+      "grading": "manual",
+      "rubric": "Reports how much more package storage Enterprise has than Team on the GitHub pricing page, in the units shown.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--8",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Look up the latest stable release version of Vuex and find out when it was published.",
+      "grading": "manual",
+      "rubric": "Names the latest stable Vuex release and its publication date from the GitHub releases page.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--10",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "If I start using Copilot Individual, how much US dollars will it cost per year and what features does it have?",
+      "grading": "manual",
+      "rubric": "Reports the annual USD price and at least two listed features of Copilot Individual from GitHub pricing.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--7",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Find the official GitHub repository for ALBERT and show me what files the repo changed in the most recent commit.",
+      "grading": "manual",
+      "rubric": "Names files changed in the most recent commit of the official ALBERT repository; the commit must be read from the repository page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "ArXiv--10",
+      "site": "ArXiv",
+      "start_url": "https://arxiv.org/",
+      "question": "Visit ArXiv Help on how to withdraw an article if the submission is not yet announced.",
+      "grading": "manual",
+      "rubric": "Reports the help instructions for withdrawing an article that has not yet been announced.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--7",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a popular recipe for a chocolate chip cookie and list the ingredients and preparation steps.",
+      "grading": "manual",
+      "rubric": "Lists the ingredients and preparation steps for a popular chocolate-chip cookie recipe on Allrecipes.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--9",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a high-rated recipe for vegetarian lasagna, list the key ingredients required, and include the total preparation and cook time stated on the recipe.",
+      "grading": "manual",
+      "rubric": "Lists key ingredients and the stated prep and cook times for a high-rated vegetarian lasagna recipe.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--13",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a recipe with over 100 reviews for Fried Fish on Allrecipes, list the Full Nutrition Label and tell me the amount of Iron per Serving.",
+      "grading": "manual",
+      "rubric": "Reports the iron per serving from the full nutrition label of a Fried Fish recipe with over 100 reviews.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--2",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Find a Beginner's Spanish Specialization on Coursera and show all the courses in this Specialization.",
+      "grading": "manual",
+      "rubric": "Names the Beginner Spanish Specialization and lists its courses from the Coursera page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--5",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+      "grading": "manual",
+      "rubric": "Names a beginner C++ Specialization and reports the learning outcomes listed on its page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--11",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Search for a Specialization on Coursera about project management that is produced by a university, show a testimonial for this Specialization.",
+      "grading": "manual",
+      "rubric": "Names a university-produced project-management Specialization and quotes one testimonial shown on the page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    }
+  ]
+}

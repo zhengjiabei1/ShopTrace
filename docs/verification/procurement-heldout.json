@@ -1,0 +1,251 @@
+{
+  "schema_version": "shoptrace.heldout-resume.v1",
+  "created_at": "2026-10-26T20:31:20.734097+00:00",
+  "status": "completed",
+  "plan": {
+    "path": "experiments/procurement-heldout-selected-adaptive.json",
+    "sha256": "4b0d432955f22261e4618ed03529d944cf3764975029e5e3da7f4d1994ba8c00",
+    "canonical_hash": "6dbd40f7ab617c3b35769fb26c3853727bc7f8a9dc631c8391542391f2abfdcb",
+    "name": "procurement-heldout-template",
+    "selection": {
+      "factor": "recovery",
+      "selected": "adaptive",
+      "report_hash": "947fc3d0cac49a603d6fbb7b37ed380c3225229e24140c99a52f6b37e02e00f1",
+      "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+      "decision_hash": "99cf4c76da5533da6019f63d86c1c579d1096e7ba47c3572215721bea15ecd49"
+    },
+    "cases": 8
+  },
+  "source": {
+    "server_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+    "runner_commit": "20a937ff68003a94b556df0b00eeae66eb3ddb93",
+    "matches_frozen": "20a937f"
+  },
+  "executor": {
+    "platform": "macOS 26.5",
+    "browser": "Google Chrome 155.0.8059.85",
+    "note": "Original four attempts were produced earlier; the four new attempts used system Chrome."
+  },
+  "results": {
+    "planned": 8,
+    "attempted": 8,
+    "passes": 7,
+    "known_failures": 0,
+    "unknown": 1,
+    "unstarted": 0,
+    "evidence_complete": 8,
+    "model_calls": 170,
+    "input_tokens": 781746,
+    "input_missing": 1,
+    "output_tokens": 6888,
+    "output_missing": 1,
+    "elapsed_seconds": 224.55679999999998,
+    "screenshots": 170,
+    "fault_triggered": 5,
+    "fault_planned": 6,
+    "attempts": [
+      {
+        "task_id": "procure-test-01",
+        "fault": "none",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 20,
+        "model_calls": 20,
+        "elapsed_seconds": 33.9753,
+        "input_tokens": 93430,
+        "output_tokens": 861,
+        "screenshots": 20,
+        "fault_triggered": false,
+        "duplicate_peak": 0,
+        "run_id": "aefb6926a2364169a2958525f5fa263a"
+      },
+      {
+        "task_id": "procure-test-01",
+        "fault": "ack_lost",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 19,
+        "model_calls": 19,
+        "elapsed_seconds": 33.6763,
+        "input_tokens": 88554,
+        "output_tokens": 826,
+        "screenshots": 19,
+        "fault_triggered": true,
+        "duplicate_peak": 0,
+        "run_id": "7bb995d4141a4cf18c13f545dca9f3f5"
+      },
+      {
+        "task_id": "procure-test-01",
+        "fault": "no_effect",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 27,
+        "model_calls": 27,
+        "elapsed_seconds": 47.1684,
+        "input_tokens": 136811,
+        "output_tokens": 1138,
+        "screenshots": 27,
+        "fault_triggered": true,
+        "duplicate_peak": 0,
+        "run_id": "6af70addcfb9434a9a23ff443c0faf6e"
+      },
+      {
+        "task_id": "procure-test-01",
+        "fault": "stockout",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "cancelled",
+        "success": null,
+        "steps": 10,
+        "model_calls": 11,
+        "elapsed_seconds": 17.5687,
+        "input_tokens": null,
+        "output_tokens": null,
+        "screenshots": 11,
+        "fault_triggered": false,
+        "duplicate_peak": 0,
+        "run_id": "da9eafc9fca14247847fd6cabbe95eaf"
+      },
+      {
+        "task_id": "procure-test-04",
+        "fault": "none",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 21,
+        "model_calls": 21,
+        "elapsed_seconds": 22.4257,
+        "input_tokens": 98173,
+        "output_tokens": 921,
+        "screenshots": 21,
+        "fault_triggered": false,
+        "duplicate_peak": 0,
+        "run_id": "6c46cc5493794bd5a87b134c5aedfbde"
+      },
+      {
+        "task_id": "procure-test-04",
+        "fault": "ack_lost",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 19,
+        "model_calls": 19,
+        "elapsed_seconds": 18.2587,
+        "input_tokens": 89734,
+        "output_tokens": 854,
+        "screenshots": 19,
+        "fault_triggered": true,
+        "duplicate_peak": 0,
+        "run_id": "ffa5cbbd60f34e9da15456838c409ba5"
+      },
+      {
+        "task_id": "procure-test-04",
+        "fault": "no_effect",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 22,
+        "model_calls": 22,
+        "elapsed_seconds": 21.4636,
+        "input_tokens": 95892,
+        "output_tokens": 967,
+        "screenshots": 22,
+        "fault_triggered": true,
+        "duplicate_peak": 0,
+        "run_id": "f69e767ba25a4dc5a08484649c977fc2"
+      },
+      {
+        "task_id": "procure-test-04",
+        "fault": "stockout",
+        "recovery": "adaptive",
+        "context_mode": "page_memory",
+        "state": "finished",
+        "status": "completed",
+        "success": true,
+        "steps": 31,
+        "model_calls": 31,
+        "elapsed_seconds": 30.0201,
+        "input_tokens": 179152,
+        "output_tokens": 1321,
+        "screenshots": 31,
+        "fault_triggered": true,
+        "duplicate_peak": 0,
+        "run_id": "aeabf4e4eaee4a28b370e88e228214ea"
+      }
+    ]
+  },
+  "original_attempts": {
+    "ids": [
+      "e3090a6787ab31b320d2",
+      "1cfef4eb17fdc694177e",
+      "1da01aa83557ace7aefe",
+      "b21dd5f011c5325dc0bc"
+    ],
+    "unchanged": true,
+    "note": "All files under the four original attempt folders matched the pre-resume backup."
+  },
+  "counts": {
+    "original_finished": 4,
+    "original_passes": 3,
+    "original_unknown": 1,
+    "new_finished": 4,
+    "new_passes": 4,
+    "formal_total": 8,
+    "known_success": 7,
+    "unknown": 1
+  },
+  "portal": {
+    "before": 57,
+    "after": 65,
+    "new_suite": "procurement-heldout",
+    "new_attempts": 8,
+    "new_screenshots": 170,
+    "png_files": 788,
+    "old_evidence_issues": 0
+  },
+  "tests": {
+    "core": {
+      "ran": 235,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 31.196,
+      "log": "docs/verification/mac-browser-suite-20261027.txt"
+    },
+    "portal": {
+      "ran": 6,
+      "failed": 0,
+      "seconds": 0.032,
+      "log": "docs/verification/mac-portal-suite-20261027.txt"
+    }
+  },
+  "security": {
+    "credential_hits_in_local_evidence": 0
+  },
+  "cost_estimate": {
+    "method": "Known usage only; all input at peak cache-miss rates; one attempt has missing usage.",
+    "cny": 1.6186,
+    "usd": 0.2428
+  },
+  "limitations": [
+    "The one cancelled stockout attempt remains unknown and was not retried.",
+    "The four original attempts were not modified during resume; the four new attempts used macOS system Chrome.",
+    "One attempt has missing provider usage; the cost estimate excludes it.",
+    "A model ID does not pin provider weights or service revisions."
+  ]
+}

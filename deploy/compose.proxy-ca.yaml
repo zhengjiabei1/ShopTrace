@@ -1,0 +1,17 @@
+# Optional override for environments that require a session outbound proxy CA.
+# Set SHOPTRACE_CA_BUNDLE to a combined PEM bundle. It is mounted, never copied.
+services:
+  shoptrace:
+    build:
+      secrets:
+        - proxy_ca
+    volumes:
+      - type: bind
+        source: ${SHOPTRACE_CA_BUNDLE:?Set a combined CA bundle path}
+        target: /run/shoptrace/ca-bundle.pem
+        read_only: true
+    environment:
+      SSL_CERT_FILE: /run/shoptrace/ca-bundle.pem
+secrets:
+  proxy_ca:
+    file: ${SHOPTRACE_CA_BUNDLE:?Set a combined CA bundle path}

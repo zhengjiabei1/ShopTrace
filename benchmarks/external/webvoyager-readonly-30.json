@@ -1,0 +1,354 @@
+{
+  "schema_version": "shoptrace.external-benchmark.v1",
+  "name": "webvoyager-readonly-30",
+  "upstream": {
+    "repository": "https://github.com/MinorJerry/WebVoyager",
+    "license": "Apache-2.0",
+    "task_file": "data/WebVoyager_data.jsonl",
+    "task_count": 643
+  },
+  "selection_rule": "Read-only information-seeking tasks across eight sites. No cart, booking, login, upload, or purchase actions. Each task is manually graded against the page state observed on the run date.",
+  "collected_at": "2026-10-28",
+  "grader": "manual",
+  "notes": [
+    "Not leaderboard-compatible: the upstream WebVoyager protocol allows writes and uses an LLM judge.",
+    "Live pages change; re-check snapshot tasks before each run.",
+    "A run that finishes with blocked or no_suitable_product is not automatically a failure."
+  ],
+  "tasks": [
+    {
+      "id": "Cambridge Dictionary--0",
+      "site": "Cambridge Dictionary",
+      "start_url": "https://dictionary.cambridge.org/",
+      "question": "Look up the pronunciation and definition of the word \"sustainability\" on the Cambridge Dictionary.",
+      "grading": "manual",
+      "rubric": "Reports the IPA and a definition consistent with the Cambridge entry. A sample sentence is optional unless the task asks for one.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Cambridge Dictionary--1",
+      "site": "Cambridge Dictionary",
+      "start_url": "https://dictionary.cambridge.org/",
+      "question": "Find the pronunciation, definition, and a sample sentence for the word 'serendipity'.",
+      "grading": "manual",
+      "rubric": "Reports the IPA, a definition, and one example sentence for \"serendipity\" from the Cambridge entry.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Cambridge Dictionary--2",
+      "site": "Cambridge Dictionary",
+      "start_url": "https://dictionary.cambridge.org/",
+      "question": "Look up the pronunciation, definition, and example sentence for the word \"ubiquitous\" in UK and US English.",
+      "grading": "manual",
+      "rubric": "Reports UK and US pronunciation plus a definition and example for \"ubiquitous\".",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Cambridge Dictionary--6",
+      "site": "Cambridge Dictionary",
+      "start_url": "https://dictionary.cambridge.org/",
+      "question": "Search for the word \"sustainability\" on the Cambridge Dictionary, what is the translation of sustainability into Chinese and French in the dictionary.",
+      "grading": "manual",
+      "rubric": "Reports the Chinese and French translations of \"sustainability\" shown on the Cambridge entry.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Cambridge Dictionary--8",
+      "site": "Cambridge Dictionary",
+      "start_url": "https://dictionary.cambridge.org/",
+      "question": "Find three different meanings of \"dog\" in Cambridge Dictionary.",
+      "grading": "manual",
+      "rubric": "Lists at least three distinct senses of \"dog\" from the Cambridge entry.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--1",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Give a constraint on the set of inequalities for the inner region of the pentagram.",
+      "grading": "manual",
+      "rubric": "Gives a constraint or system describing the inner region of a pentagram; the answer must be a mathematical result, not a page summary.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--4",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Pack 24 circles in a circle radius r. Compare Densest known packing and Square packing. Then tell me the radius of the inner circles.",
+      "grading": "manual",
+      "rubric": "Reports the inner-circle radius for 24 circles packed in a circle, and distinguishes the densest-known and square packings.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--5",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Show the solution of y\"(z) + sin(y(z)) = 0 from wolframalpha.",
+      "grading": "manual",
+      "rubric": "Gives the solution to the stated ODE, including the independent variable and any constants Wolfram Alpha reports.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--11",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Show the electrical resistivity of UNS A92024 and UNS G10800 at 20 degrees Celsius.",
+      "grading": "manual",
+      "rubric": "Reports the electrical resistivity of both UNS A92024 and UNS G10800 at 20 C, with units.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Wolfram Alpha--15",
+      "site": "Wolfram Alpha",
+      "start_url": "https://www.wolframalpha.com/",
+      "question": "Show the blood relationship fraction between you and your father's mother's sister's son.",
+      "grading": "manual",
+      "rubric": "Reports the blood-relationship fraction for the stated relative; the fraction must match the kinship described.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--3",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Find out how much more package storage the Enterprise version has over Team in GitHub Pricing.",
+      "grading": "manual",
+      "rubric": "Reports how much more package storage Enterprise has than Team on the GitHub pricing page, in the units shown.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--8",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Look up the latest stable release version of Vuex and find out when it was published.",
+      "grading": "manual",
+      "rubric": "Names the latest stable Vuex release and its publication date from the GitHub releases page.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--10",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "If I start using Copilot Individual, how much US dollars will it cost per year and what features does it have?",
+      "grading": "manual",
+      "rubric": "Reports the annual USD price and at least two listed features of Copilot Individual from GitHub pricing.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "GitHub--7",
+      "site": "GitHub",
+      "start_url": "https://github.com/",
+      "question": "Find the official GitHub repository for ALBERT and show me what files the repo changed in the most recent commit.",
+      "grading": "manual",
+      "rubric": "Names files changed in the most recent commit of the official ALBERT repository; the commit must be read from the repository page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Huggingface--3",
+      "site": "Huggingface",
+      "start_url": "https://huggingface.co/",
+      "question": "Look up a model with a license of cc-by-sa-4.0 with the most likes on Hugging face.",
+      "grading": "manual",
+      "rubric": "Names a model with a cc-by-sa-4.0 license and the most likes among models filtered by that license; the filter and sort must be visible.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Huggingface--5",
+      "site": "Huggingface",
+      "start_url": "https://huggingface.co/",
+      "question": "Find a model released on Hugging Face for recipe generation. Retrieve the information of the model, including its name, model size and tensor type.",
+      "grading": "manual",
+      "rubric": "Names a recipe-generation model and reports its name, model size, and tensor type from the model card.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Huggingface--13",
+      "site": "Huggingface",
+      "start_url": "https://huggingface.co/",
+      "question": "Search for LLaMA in the huggingface doc, what type is the spaces_between_special_tokens parameter in LlamaTokenizer and what is its default value.",
+      "grading": "manual",
+      "rubric": "Reports the type and default value of spaces_between_special_tokens from the LlamaTokenizer documentation.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Huggingface--14",
+      "site": "Huggingface",
+      "start_url": "https://huggingface.co/",
+      "question": "How much is the Pro account of Hugging face for a month and what are the features?",
+      "grading": "manual",
+      "rubric": "Reports the monthly Pro price and at least two features from the Hugging Face pricing page.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "ArXiv--6",
+      "site": "ArXiv",
+      "start_url": "https://arxiv.org/",
+      "question": "How many figures and tables are in the paper \"On the Sentence Embeddings from Pre-trained Language Models\"?",
+      "grading": "manual",
+      "rubric": "Reports the number of figures and tables in \"On the Sentence Embeddings from Pre-trained Language Models\"; the paper title must match.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "ArXiv--10",
+      "site": "ArXiv",
+      "start_url": "https://arxiv.org/",
+      "question": "Visit ArXiv Help on how to withdraw an article if the submission is not yet announced.",
+      "grading": "manual",
+      "rubric": "Reports the help instructions for withdrawing an article that has not yet been announced.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "ArXiv--11",
+      "site": "ArXiv",
+      "start_url": "https://arxiv.org/",
+      "question": "For Non-English submissions, do I need to provide a multi-language abstract, if need, answer the separator between the multiple abstracts.",
+      "grading": "manual",
+      "rubric": "Reports whether a multi-language abstract is required for non-English submissions and the separator between abstracts.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--7",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a popular recipe for a chocolate chip cookie and list the ingredients and preparation steps.",
+      "grading": "manual",
+      "rubric": "Lists the ingredients and preparation steps for a popular chocolate-chip cookie recipe on Allrecipes.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--9",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a high-rated recipe for vegetarian lasagna, list the key ingredients required, and include the total preparation and cook time stated on the recipe.",
+      "grading": "manual",
+      "rubric": "Lists key ingredients and the stated prep and cook times for a high-rated vegetarian lasagna recipe.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Allrecipes--13",
+      "site": "Allrecipes",
+      "start_url": "https://www.allrecipes.com/",
+      "question": "Find a recipe with over 100 reviews for Fried Fish on Allrecipes, list the Full Nutrition Label and tell me the amount of Iron per Serving.",
+      "grading": "manual",
+      "rubric": "Reports the iron per serving from the full nutrition label of a Fried Fish recipe with over 100 reviews.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Apple--6",
+      "site": "Apple",
+      "start_url": "https://www.apple.com/",
+      "question": "Find AirPods on Apple and how many types are currently available.",
+      "grading": "manual",
+      "rubric": "Lists the AirPods types currently shown on Apple and the count; the page must be Apple-owned.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Apple--12",
+      "site": "Apple",
+      "start_url": "https://www.apple.com/",
+      "question": "What Apple Repair ways are mentioned on apple website, answer 2 of them.",
+      "grading": "manual",
+      "rubric": "Names two Apple Repair options described on Apple support or the Apple website.",
+      "stability": "stable",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)",
+      "extra_origins": [
+        "https://support.apple.com"
+      ]
+    },
+    {
+      "id": "Apple--1",
+      "site": "Apple",
+      "start_url": "https://www.apple.com/",
+      "question": "Research the new features of the iOS 17 on Apple support and check its compatibility with the iPhone 12.",
+      "grading": "manual",
+      "rubric": "Reports at least two iOS 17 features and whether iPhone 12 is listed as compatible, from Apple support.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--2",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Find a Beginner's Spanish Specialization on Coursera and show all the courses in this Specialization.",
+      "grading": "manual",
+      "rubric": "Names the Beginner Spanish Specialization and lists its courses from the Coursera page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--5",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Identify a Specialization on Coursera that teaches C++ programming for beginners, provide the name and what the learning outcomes are.",
+      "grading": "manual",
+      "rubric": "Names a beginner C++ Specialization and reports the learning outcomes listed on its page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    },
+    {
+      "id": "Coursera--11",
+      "site": "Coursera",
+      "start_url": "https://www.coursera.org/",
+      "question": "Search for a Specialization on Coursera about project management that is produced by a university, show a testimonial for this Specialization.",
+      "grading": "manual",
+      "rubric": "Names a university-produced project-management Specialization and quotes one testimonial shown on the page.",
+      "stability": "snapshot",
+      "read_only": true,
+      "source": "WebVoyager (Apache-2.0)"
+    }
+  ],
+  "task_count": 30
+}

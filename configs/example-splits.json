@@ -1,0 +1,26 @@
+{
+  "description": "仅展示划分检查格式；全部为合成示例，不是正式训练或评测数据。",
+  "splits": {
+    "train": [
+      {
+        "task_id": "fixture-001",
+        "query": "【合成测试任务】寻找黑色无线耳机，预算不超过 300 元。",
+        "product_id": "DEMO-HEADPHONE"
+      }
+    ],
+    "validation": [
+      {
+        "task_id": "fixture-002",
+        "query": "【合成测试任务】寻找蓝色 500ml 保温杯，预算不超过 100 元。",
+        "product_id": "DEMO-CUP"
+      }
+    ],
+    "test": [
+      {
+        "task_id": "fixture-003",
+        "query": "【合成测试任务】寻找预算不超过 50 元的机械键盘；不存在合适候选时停止。",
+        "product_id": "DEMO-KEYBOARD"
+      }
+    ]
+  }
+}

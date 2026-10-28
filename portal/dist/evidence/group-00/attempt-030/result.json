@@ -1,0 +1,67 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "browser-headphones-unknown",
+  "query": "请核对不超过280元的灰色耳机是否支持无线连接。若详情没有展示连接信息，请在详情页保留不确定并结束，不要猜测，也不要加入购物清单。",
+  "model": {
+    "provider": "api",
+    "name": "deepseek-flash"
+  },
+  "runtime": {
+    "max_steps": 35,
+    "max_seconds": 180,
+    "max_output_tokens": 512
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8780/sandbox/",
+    "allowed_origins": [
+      "http://127.0.0.1:8780"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8780": [
+        "/sandbox/"
+      ]
+    }
+  },
+  "run_id": "e10da772b576405986d9ebc61329c5d6",
+  "source": "browser_model",
+  "created_at": "2026-10-26T08:00:37.913979+00:00",
+  "completed_at": "2026-10-26T08:00:45.658812+00:00",
+  "status": "completed",
+  "termination_reason": "agent_finished",
+  "steps": 3,
+  "model_calls": 3,
+  "elapsed_seconds": 7.739,
+  "usage": {
+    "input_tokens": 7542,
+    "output_tokens": 175
+  },
+  "result": {
+    "benchmark": "shoptrace-browser-sandbox-v1",
+    "success": true,
+    "reason": "已在实际详情页保留缺失的连接信息，未将未知条件当作符合，也未加入清单。",
+    "evidence": [
+      {
+        "source": "visible_product_detail",
+        "product_id": "h-cloud",
+        "text": "♬\n商品示意图\n耳机\n示例云声耳机\n\n灰色轻量耳机，部分参数尚未展示。\n\n¥269.00\n页面展示的规格\n颜色\n灰色\n无线连接\n未展示\n连接方式\n未展示\n重量\n180g\n加入购物清单\n查看购物清单\n\n加入清单只是保存候选，不会下单或付款。"
+      }
+    ],
+    "scope": "仅核验固定本地仿真目录和当前浏览器DOM，不代表真实商家库存、付款或全网购物成功。",
+    "outcome_kind": "uncertainty_reported"
+  },
+  "error": null,
+  "started_at": "2026-10-26T08:00:37.919846+00:00",
+  "protocol_version": "shoptrace-browser-v1",
+  "prompt_hash": "bc20f177804e85264e70d52dadc540d7cc5de16e9ae3404d74a031f8bd78f763",
+  "tools_hash": "f349013903d863bfc6b01f4b6c72ec58e0724f4a958cb43cb85bfd4ed1ec6adf",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "model_responses": 3
+}

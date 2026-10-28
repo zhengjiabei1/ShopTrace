@@ -1,0 +1,2108 @@
+{
+  "schema_version": "shoptrace-expanded-cases-v2-en-US",
+  "notice": "Development and held-out sample cases for this project.",
+  "cases": [
+    {
+      "id": "case-7f20",
+      "split": "development",
+      "title": "Check headphone connectivity and budget",
+      "query": "Find black wireless headphones costing no more than CNY 260. Check their details, add them to the shopping list, then open the list and keep only that item.",
+      "difficulty": "medium",
+      "goal": {
+        "category": "headphones",
+        "max_price": 260,
+        "color": "Black",
+        "wireless": true
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "m170",
+            "name": "Sample Pine Breeze Headphones",
+            "category": "headphones",
+            "price": 190,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "m171",
+            "name": "Sample Cloud Rest Headphones",
+            "category": "headphones",
+            "price": 240,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Silver"
+            ],
+            "facts": {
+              "color": "Silver",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          },
+          {
+            "id": "m172",
+            "name": "Sample Ferry Headphones",
+            "category": "headphones",
+            "price": 285,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 190
+            },
+            "options": []
+          },
+          {
+            "id": "m173",
+            "name": "Sample Mountain Glow Headphones",
+            "category": "headphones",
+            "price": 210,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 195
+            },
+            "options": []
+          },
+          {
+            "id": "m174",
+            "name": "Sample Rainfall Headphones",
+            "category": "headphones",
+            "price": 249,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 200
+            },
+            "options": []
+          },
+          {
+            "id": "m175",
+            "name": "Sample Far Shore Headphones",
+            "category": "headphones",
+            "price": 215,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Red"
+            ],
+            "facts": {
+              "color": "Red",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 205
+            },
+            "options": []
+          },
+          {
+            "id": "m176",
+            "name": "Sample Bamboo Shade Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "m177",
+            "name": "Sample Creekside Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-b8d1",
+      "split": "development",
+      "title": "Check the final thermos variant price",
+      "query": "Find a green 600 mL thermos with a final selected-variant price of no more than CNY 120. Check color, capacity, and final price before adding it to the shopping list. Open the list and keep only that item.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "thermos",
+        "max_price": 120,
+        "color": "Green",
+        "capacity_ml": 600
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "r280",
+            "name": "Sample Pine Breeze Thermos",
+            "category": "thermos",
+            "price": 85,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Green"
+            ],
+            "facts": {
+              "color": "Green",
+              "capacity_ml": 400,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "r281",
+            "name": "Sample Cloud Rest Thermos",
+            "category": "thermos",
+            "price": 80,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 600,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "r282",
+            "name": "Sample Ferry Thermos",
+            "category": "thermos",
+            "price": 130,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Green"
+            ],
+            "facts": {
+              "color": "Green",
+              "capacity_ml": 600,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "r283",
+            "name": "Sample Mountain Glow Thermos",
+            "category": "thermos",
+            "price": 90,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 400,
+              "material": "Stainless steel"
+            },
+            "options": [
+              {
+                "id": "color",
+                "label": "Color",
+                "values": [
+                  {
+                    "value": "Ivory",
+                    "label": "Ivory",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "Green",
+                    "label": "Green (+CNY 5)",
+                    "price_delta": 5
+                  }
+                ]
+              },
+              {
+                "id": "capacity",
+                "label": "Capacity",
+                "values": [
+                  {
+                    "value": "400ml",
+                    "label": "400ml",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "600ml",
+                    "label": "600ml (+CNY 50)",
+                    "price_delta": 50
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "r284",
+            "name": "Sample Rainfall Thermos",
+            "category": "thermos",
+            "price": 75,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 400,
+              "material": "Stainless steel"
+            },
+            "options": [
+              {
+                "id": "color",
+                "label": "Color",
+                "values": [
+                  {
+                    "value": "Ivory",
+                    "label": "Ivory",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "Green",
+                    "label": "Green (+CNY 5)",
+                    "price_delta": 5
+                  }
+                ]
+              },
+              {
+                "id": "capacity",
+                "label": "Capacity",
+                "values": [
+                  {
+                    "value": "400ml",
+                    "label": "400ml",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "600ml",
+                    "label": "600ml (+CNY 35)",
+                    "price_delta": 35
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "r285",
+            "name": "Sample Far Shore Thermos",
+            "category": "thermos",
+            "price": 78,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Pink"
+            ],
+            "facts": {
+              "color": "Pink",
+              "capacity_ml": 600,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "r286",
+            "name": "Sample Bamboo Shade Headphones",
+            "category": "headphones",
+            "price": 189,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "r287",
+            "name": "Sample Creekside Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-2c94",
+      "split": "development",
+      "title": "Compare power bank specifications",
+      "query": "Find a white 20,000 mAh power bank with USB-C, a maximum output of at least 30 W, and a price no higher than CNY 220. Check the details, add it to the shopping list, then open the list and keep only that item.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "powerbank",
+        "max_price": 220,
+        "color": "White",
+        "capacity_mah": 20000,
+        "port": "USB-C",
+        "min_output_w": 30
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "s390",
+            "name": "Sample Pine Breeze Power Bank",
+            "category": "powerbank",
+            "price": 179,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "White"
+            ],
+            "facts": {
+              "color": "White",
+              "capacity_mah": 20000,
+              "max_output_w": 20,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s391",
+            "name": "Sample Cloud Rest Power Bank",
+            "category": "powerbank",
+            "price": 189,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "White"
+            ],
+            "facts": {
+              "color": "White",
+              "capacity_mah": 20000,
+              "max_output_w": 30,
+              "port": "USB-A",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s392",
+            "name": "Sample Ferry Power Bank",
+            "category": "powerbank",
+            "price": 199,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_mah": 20000,
+              "max_output_w": 30,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s393",
+            "name": "Sample Mountain Glow Power Bank",
+            "category": "powerbank",
+            "price": 184,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "White"
+            ],
+            "facts": {
+              "color": "White",
+              "capacity_mah": 10000,
+              "max_output_w": 30,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s394",
+            "name": "Sample Rainfall Power Bank",
+            "category": "powerbank",
+            "price": 249,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "White"
+            ],
+            "facts": {
+              "color": "White",
+              "capacity_mah": 20000,
+              "max_output_w": 30,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s395",
+            "name": "Sample Far Shore Power Bank",
+            "category": "powerbank",
+            "price": 219,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "White"
+            ],
+            "facts": {
+              "color": "White",
+              "capacity_mah": 20000,
+              "max_output_w": 30,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "s396",
+            "name": "Sample Bamboo Shade Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "s397",
+            "name": "Sample Creekside Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-e615",
+      "split": "development",
+      "title": "Check the lamp requirements",
+      "query": "Find a dimmable USB-powered lamp with warm light costing no more than CNY 180. Check the details, add it to the shopping list, then open the list and keep only that item.",
+      "difficulty": "medium",
+      "goal": {
+        "category": "lamp",
+        "max_price": 180,
+        "light": "Warm light",
+        "dimmable": true,
+        "power_supply": "USB"
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "u4a0",
+            "name": "Sample Pine Breeze Lamp",
+            "category": "lamp",
+            "price": 129,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "Warm light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "u4a1",
+            "name": "Sample Cloud Rest Lamp",
+            "category": "lamp",
+            "price": 139,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "u4a2",
+            "name": "Sample Ferry Lamp",
+            "category": "lamp",
+            "price": 149,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Warm light",
+              "power_supply": "Battery",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "u4a3",
+            "name": "Sample Mountain Glow Lamp",
+            "category": "lamp",
+            "price": 195,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Warm light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "u4a4",
+            "name": "Sample Rainfall Lamp",
+            "category": "lamp",
+            "price": 169,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Warm light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "u4a5",
+            "name": "Sample Far Shore Lamp",
+            "category": "lamp",
+            "price": 119,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "Cool light",
+              "power_supply": "Mains",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "u4a6",
+            "name": "Sample Bamboo Shade Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "u4a7",
+            "name": "Sample Creekside Headphones",
+            "category": "headphones",
+            "price": 189,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-43a8",
+      "split": "development",
+      "title": "Stop when no product matches",
+      "query": "Filter the Thermos category with a maximum price of CNY 40 to look for a red 500 mL thermos. If no product matches, stay on the filtered results page, keep the shopping list empty, and report that no suitable product is available. Do not raise the budget or relax the requirements.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "thermos",
+        "max_price": 40,
+        "color": "Red",
+        "capacity_ml": 500
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "v5b0",
+            "name": "Sample Pine Breeze Thermos",
+            "category": "thermos",
+            "price": 59,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Red"
+            ],
+            "facts": {
+              "color": "Red",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b1",
+            "name": "Sample Cloud Rest Thermos",
+            "category": "thermos",
+            "price": 65,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b2",
+            "name": "Sample Ferry Thermos",
+            "category": "thermos",
+            "price": 79,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b3",
+            "name": "Sample Mountain Glow Thermos",
+            "category": "thermos",
+            "price": 60,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_ml": 600,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b4",
+            "name": "Sample Rainfall Thermos",
+            "category": "thermos",
+            "price": 70,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Pink"
+            ],
+            "facts": {
+              "color": "Pink",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b5",
+            "name": "Sample Far Shore Thermos",
+            "category": "thermos",
+            "price": 55,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Green"
+            ],
+            "facts": {
+              "color": "Green",
+              "capacity_ml": 400,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "v5b6",
+            "name": "Sample Bamboo Shade Lamp",
+            "category": "lamp",
+            "price": 29,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "v5b7",
+            "name": "Sample Creekside Headphones",
+            "category": "headphones",
+            "price": 35,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 185
+            },
+            "options": []
+          }
+        ]
+      },
+      "kind": "none"
+    },
+    {
+      "id": "case-90ce",
+      "split": "development",
+      "title": "Keep missing connection details uncertain",
+      "query": "Check whether blue headphones costing no more than CNY 310 support wireless connectivity. If the product details do not provide connection information, stay on the details page and report the uncertainty. Do not guess or add the item to the shopping list.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "headphones",
+        "max_price": 310,
+        "color": "Blue",
+        "wireless": true
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "x6c0",
+            "name": "Sample Pine Breeze Headphones",
+            "category": "headphones",
+            "price": 350,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "x6c1",
+            "name": "Sample Cloud Rest Headphones",
+            "category": "headphones",
+            "price": 250,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Silver"
+            ],
+            "facts": {
+              "color": "Silver",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          },
+          {
+            "id": "x6c2",
+            "name": "Sample Ferry Headphones",
+            "category": "headphones",
+            "price": 230,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 190
+            },
+            "options": []
+          },
+          {
+            "id": "x6c3",
+            "name": "Sample Mountain Glow Headphones",
+            "category": "headphones",
+            "price": 299,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 195
+            },
+            "options": []
+          },
+          {
+            "id": "x6c4",
+            "name": "Sample Rainfall Headphones",
+            "category": "headphones",
+            "price": 380,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 200
+            },
+            "options": []
+          },
+          {
+            "id": "x6c5",
+            "name": "Sample Far Shore Headphones",
+            "category": "headphones",
+            "price": 280,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Red"
+            ],
+            "facts": {
+              "color": "Red",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 205
+            },
+            "options": []
+          },
+          {
+            "id": "x6c6",
+            "name": "Sample Bamboo Shade Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "x6c7",
+            "name": "Sample Creekside Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      },
+      "kind": "unknown",
+      "unknown_field": "wireless"
+    },
+    {
+      "id": "case-a64d",
+      "split": "heldout",
+      "title": "Check headphone connectivity and budget",
+      "query": "Find ivory wireless headphones costing no more than CNY 330. Check their details, add them to the shopping list, then open the list and keep only that item.",
+      "difficulty": "medium",
+      "goal": {
+        "category": "headphones",
+        "max_price": 330,
+        "color": "Ivory",
+        "wireless": true
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "y7d0",
+            "name": "Sample Dune Song Headphones",
+            "category": "headphones",
+            "price": 260,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "y7d1",
+            "name": "Sample Starlit Bay Headphones",
+            "category": "headphones",
+            "price": 310,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Silver"
+            ],
+            "facts": {
+              "color": "Silver",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          },
+          {
+            "id": "y7d2",
+            "name": "Sample Reedbank Headphones",
+            "category": "headphones",
+            "price": 355,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 190
+            },
+            "options": []
+          },
+          {
+            "id": "y7d3",
+            "name": "Sample Frostwood Headphones",
+            "category": "headphones",
+            "price": 280,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 195
+            },
+            "options": []
+          },
+          {
+            "id": "y7d4",
+            "name": "Sample Clear Lake Headphones",
+            "category": "headphones",
+            "price": 319,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 200
+            },
+            "options": []
+          },
+          {
+            "id": "y7d5",
+            "name": "Sample Dawn Ridge Headphones",
+            "category": "headphones",
+            "price": 285,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Red"
+            ],
+            "facts": {
+              "color": "Red",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 205
+            },
+            "options": []
+          },
+          {
+            "id": "y7d6",
+            "name": "Sample Inkboat Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "y7d7",
+            "name": "Sample Headland Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-31f9",
+      "split": "heldout",
+      "title": "Check the final thermos variant price",
+      "query": "Find a purple 750 mL thermos with a final selected-variant price of no more than CNY 160. Check color, capacity, and final price before adding it to the shopping list. Open the list and keep only that item.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "thermos",
+        "max_price": 160,
+        "color": "Purple",
+        "capacity_ml": 750
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "z8e0",
+            "name": "Sample Dune Song Thermos",
+            "category": "thermos",
+            "price": 106,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Purple"
+            ],
+            "facts": {
+              "color": "Purple",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "z8e1",
+            "name": "Sample Starlit Bay Thermos",
+            "category": "thermos",
+            "price": 101,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 750,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "z8e2",
+            "name": "Sample Reedbank Thermos",
+            "category": "thermos",
+            "price": 170,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Purple"
+            ],
+            "facts": {
+              "color": "Purple",
+              "capacity_ml": 750,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "z8e3",
+            "name": "Sample Frostwood Thermos",
+            "category": "thermos",
+            "price": 111,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": [
+              {
+                "id": "color",
+                "label": "Color",
+                "values": [
+                  {
+                    "value": "Ivory",
+                    "label": "Ivory",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "Purple",
+                    "label": "Purple (+CNY 9)",
+                    "price_delta": 9
+                  }
+                ]
+              },
+              {
+                "id": "capacity",
+                "label": "Capacity",
+                "values": [
+                  {
+                    "value": "500ml",
+                    "label": "500ml",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "750ml",
+                    "label": "750ml (+CNY 58)",
+                    "price_delta": 58
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "z8e4",
+            "name": "Sample Clear Lake Thermos",
+            "category": "thermos",
+            "price": 96,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": [
+              {
+                "id": "color",
+                "label": "Color",
+                "values": [
+                  {
+                    "value": "Ivory",
+                    "label": "Ivory",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "Purple",
+                    "label": "Purple (+CNY 9)",
+                    "price_delta": 9
+                  }
+                ]
+              },
+              {
+                "id": "capacity",
+                "label": "Capacity",
+                "values": [
+                  {
+                    "value": "500ml",
+                    "label": "500ml",
+                    "price_delta": 0
+                  },
+                  {
+                    "value": "750ml",
+                    "label": "750ml (+CNY 43)",
+                    "price_delta": 43
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "z8e5",
+            "name": "Sample Dawn Ridge Thermos",
+            "category": "thermos",
+            "price": 99,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Pink"
+            ],
+            "facts": {
+              "color": "Pink",
+              "capacity_ml": 750,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "z8e6",
+            "name": "Sample Inkboat Headphones",
+            "category": "headphones",
+            "price": 189,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "z8e7",
+            "name": "Sample Headland Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-d082",
+      "split": "heldout",
+      "title": "Compare power bank specifications",
+      "query": "Find a blue 10,000 mAh power bank with USB-C, a maximum output of at least 45 W, and a price no higher than CNY 260. Check the details, add it to the shopping list, then open the list and keep only that item.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "powerbank",
+        "max_price": 260,
+        "color": "Blue",
+        "capacity_mah": 10000,
+        "port": "USB-C",
+        "min_output_w": 45
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "n9f0",
+            "name": "Sample Dune Song Power Bank",
+            "category": "powerbank",
+            "price": 209,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_mah": 10000,
+              "max_output_w": 35,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f1",
+            "name": "Sample Starlit Bay Power Bank",
+            "category": "powerbank",
+            "price": 219,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_mah": 10000,
+              "max_output_w": 45,
+              "port": "USB-A",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f2",
+            "name": "Sample Reedbank Power Bank",
+            "category": "powerbank",
+            "price": 229,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_mah": 10000,
+              "max_output_w": 45,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f3",
+            "name": "Sample Frostwood Power Bank",
+            "category": "powerbank",
+            "price": 214,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_mah": 5000,
+              "max_output_w": 45,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f4",
+            "name": "Sample Clear Lake Power Bank",
+            "category": "powerbank",
+            "price": 279,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_mah": 10000,
+              "max_output_w": 45,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f5",
+            "name": "Sample Dawn Ridge Power Bank",
+            "category": "powerbank",
+            "price": 249,
+            "summary": "Check the port, capacity, and maximum output on the product page.",
+            "tags": [
+              "Power bank",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_mah": 10000,
+              "max_output_w": 45,
+              "port": "USB-C",
+              "weight_g": 210
+            },
+            "options": []
+          },
+          {
+            "id": "n9f6",
+            "name": "Sample Inkboat Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "n9f7",
+            "name": "Sample Headland Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-58be",
+      "split": "heldout",
+      "title": "Check the lamp requirements",
+      "query": "Find a dimmable USB-powered lamp with natural light costing no more than CNY 210. Check the details, add it to the shopping list, then open the list and keep only that item.",
+      "difficulty": "medium",
+      "goal": {
+        "category": "lamp",
+        "max_price": 210,
+        "light": "Natural light",
+        "dimmable": true,
+        "power_supply": "USB"
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "p100",
+            "name": "Sample Dune Song Lamp",
+            "category": "lamp",
+            "price": 159,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "Natural light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "p101",
+            "name": "Sample Starlit Bay Lamp",
+            "category": "lamp",
+            "price": 169,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "p102",
+            "name": "Sample Reedbank Lamp",
+            "category": "lamp",
+            "price": 179,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Natural light",
+              "power_supply": "Battery",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "p103",
+            "name": "Sample Frostwood Lamp",
+            "category": "lamp",
+            "price": 225,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Natural light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "p104",
+            "name": "Sample Clear Lake Lamp",
+            "category": "lamp",
+            "price": 199,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": true,
+              "light": "Natural light",
+              "power_supply": "USB",
+              "brightness_levels": 3
+            },
+            "options": []
+          },
+          {
+            "id": "p105",
+            "name": "Sample Dawn Ridge Lamp",
+            "category": "lamp",
+            "price": 149,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "Cool light",
+              "power_supply": "Mains",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "p106",
+            "name": "Sample Inkboat Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "p107",
+            "name": "Sample Headland Headphones",
+            "category": "headphones",
+            "price": 189,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-f327",
+      "split": "heldout",
+      "title": "Stop when no product matches",
+      "query": "Filter the Thermos category with a maximum price of CNY 55 to look for a purple 750 mL thermos. If no product matches, stay on the filtered results page, keep the shopping list empty, and report that no suitable product is available. Do not raise the budget or relax the requirements.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "thermos",
+        "max_price": 55,
+        "color": "Purple",
+        "capacity_ml": 750
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "q210",
+            "name": "Sample Dune Song Thermos",
+            "category": "thermos",
+            "price": 74,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Purple"
+            ],
+            "facts": {
+              "color": "Purple",
+              "capacity_ml": 750,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q211",
+            "name": "Sample Starlit Bay Thermos",
+            "category": "thermos",
+            "price": 80,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q212",
+            "name": "Sample Reedbank Thermos",
+            "category": "thermos",
+            "price": 94,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q213",
+            "name": "Sample Frostwood Thermos",
+            "category": "thermos",
+            "price": 75,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Blue"
+            ],
+            "facts": {
+              "color": "Blue",
+              "capacity_ml": 600,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q214",
+            "name": "Sample Clear Lake Thermos",
+            "category": "thermos",
+            "price": 85,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Pink"
+            ],
+            "facts": {
+              "color": "Pink",
+              "capacity_ml": 500,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q215",
+            "name": "Sample Dawn Ridge Thermos",
+            "category": "thermos",
+            "price": 70,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Green"
+            ],
+            "facts": {
+              "color": "Green",
+              "capacity_ml": 400,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "q216",
+            "name": "Sample Inkboat Lamp",
+            "category": "lamp",
+            "price": 29,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          },
+          {
+            "id": "q217",
+            "name": "Sample Headland Headphones",
+            "category": "headphones",
+            "price": 35,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 185
+            },
+            "options": []
+          }
+        ]
+      },
+      "kind": "none"
+    },
+    {
+      "id": "case-0b65",
+      "split": "heldout",
+      "title": "Keep missing connection details uncertain",
+      "query": "Check whether gray headphones costing no more than CNY 360 support wireless connectivity. If the product details do not provide connection information, stay on the details page and report the uncertainty. Do not guess or add the item to the shopping list.",
+      "difficulty": "hard",
+      "goal": {
+        "category": "headphones",
+        "max_price": 360,
+        "color": "Gray",
+        "wireless": true
+      },
+      "catalog": {
+        "schema_version": "shoptrace-browser-catalog-v2-en-US",
+        "notice": "Sample products for local browser tasks. No checkout or payment.",
+        "products": [
+          {
+            "id": "w320",
+            "name": "Sample Dune Song Headphones",
+            "category": "headphones",
+            "price": 400,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Gray"
+            ],
+            "facts": {
+              "color": "Gray",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 180
+            },
+            "options": []
+          },
+          {
+            "id": "w321",
+            "name": "Sample Starlit Bay Headphones",
+            "category": "headphones",
+            "price": 300,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Silver"
+            ],
+            "facts": {
+              "color": "Silver",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 185
+            },
+            "options": []
+          },
+          {
+            "id": "w322",
+            "name": "Sample Reedbank Headphones",
+            "category": "headphones",
+            "price": 280,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "wireless": false,
+              "connection": "3.5 mm wired",
+              "weight_g": 190
+            },
+            "options": []
+          },
+          {
+            "id": "w323",
+            "name": "Sample Frostwood Headphones",
+            "category": "headphones",
+            "price": 349,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Gray"
+            ],
+            "facts": {
+              "color": "Gray",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 195
+            },
+            "options": []
+          },
+          {
+            "id": "w324",
+            "name": "Sample Clear Lake Headphones",
+            "category": "headphones",
+            "price": 430,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Gray"
+            ],
+            "facts": {
+              "color": "Gray",
+              "wireless": null,
+              "connection": null,
+              "weight_g": 200
+            },
+            "options": []
+          },
+          {
+            "id": "w325",
+            "name": "Sample Dawn Ridge Headphones",
+            "category": "headphones",
+            "price": 330,
+            "summary": "Check color and connection details on the product page.",
+            "tags": [
+              "Headphones",
+              "Red"
+            ],
+            "facts": {
+              "color": "Red",
+              "wireless": true,
+              "connection": "Bluetooth wireless",
+              "weight_g": 205
+            },
+            "options": []
+          },
+          {
+            "id": "w326",
+            "name": "Sample Inkboat Thermos",
+            "category": "thermos",
+            "price": 69,
+            "summary": "Check capacity, color, and the final variant price.",
+            "tags": [
+              "Thermos",
+              "Black"
+            ],
+            "facts": {
+              "color": "Black",
+              "capacity_ml": 450,
+              "material": "Stainless steel"
+            },
+            "options": []
+          },
+          {
+            "id": "w327",
+            "name": "Sample Headland Lamp",
+            "category": "lamp",
+            "price": 89,
+            "summary": "Check the light, dimming, and power source on the product page.",
+            "tags": [
+              "Lamp",
+              "Ivory"
+            ],
+            "facts": {
+              "color": "Ivory",
+              "dimmable": false,
+              "light": "White light",
+              "power_supply": "USB",
+              "brightness_levels": 1
+            },
+            "options": []
+          }
+        ]
+      },
+      "kind": "unknown",
+      "unknown_field": "wireless"
+    }
+  ]
+}

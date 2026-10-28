@@ -1,0 +1,8 @@
+*.webp binary
+*.gif binary
+*.json.gz binary
+
+portal/dist/evidence/** linguist-generated=true
+portal/dist/report.json linguist-generated=true
+portal/dist/report-data.js linguist-generated=true
+portal/dist/manifest.json linguist-generated=true

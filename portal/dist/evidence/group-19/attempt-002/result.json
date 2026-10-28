@@ -1,0 +1,74 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "browser-thermos-variant",
+  "query": "Find a blue 500 mL thermos with a final selected-variant price of no more than CNY 100. Select the correct variant, add it to the shopping list, then open the list and keep only that item.",
+  "model": {
+    "provider": "browser_smoke",
+    "name": "fixed-browser-smoke"
+  },
+  "runtime": {
+    "max_steps": 35,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "full_history"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8775/sandbox/",
+    "allowed_origins": [
+      "http://127.0.0.1:8775"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8775": [
+        "/sandbox/"
+      ]
+    }
+  },
+  "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+  "run_id": "cce164b5c6a24b0e9d552e3d625c18a9",
+  "source": "browser_smoke",
+  "created_at": "2026-10-26T19:09:22.698901+00:00",
+  "completed_at": "2026-10-26T19:09:24.462988+00:00",
+  "status": "completed",
+  "termination_reason": "agent_finished",
+  "steps": 8,
+  "model_calls": 0,
+  "elapsed_seconds": 1.7606,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "result": {
+    "benchmark": "shoptrace-browser-sandbox-v1",
+    "success": true,
+    "reason": "The listed item, variant, and price meet the requirements.",
+    "evidence": [
+      {
+        "source": "visible_cart_dom",
+        "product_id": "t-bay",
+        "color": "Blue",
+        "capacity": "500ml",
+        "price": "99",
+        "text": "▥\nProduct illustration\nSample Blue Bay Thermos\nColor\nBlue\nCapacity\n500 mL\nMaterial\nStainless steel\n\nQuantity: 1\n\nCNY 99.00\nRemove"
+      }
+    ],
+    "scope": "Checked against the local catalog and current page.",
+    "outcome_kind": "cart_verified"
+  },
+  "error": null,
+  "started_at": "2026-10-26T19:09:22.702473+00:00",
+  "protocol_version": "shoptrace-browser-v1",
+  "prompt_hash": "7a86ac3c8cf41ead7ca0d0ed1ae19bb64dc00e549e1be8509dff916256d1183b",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "full_history"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "source_unchanged": true,
+  "model_responses": 0
+}

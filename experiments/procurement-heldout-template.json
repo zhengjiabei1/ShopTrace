@@ -1,0 +1,70 @@
+{
+  "schema_version": "shoptrace.procurement-plan.v1",
+  "name": "procurement-heldout-template",
+  "split": "heldout",
+  "benchmark": "shoptrace-procurement-v1",
+  "model": "deepseek-flash",
+  "budgets": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512
+  },
+  "cases": [
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "ack_lost",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "no_effect",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-01",
+      "seed": 7,
+      "fault": "stockout",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "ack_lost",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "no_effect",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-test-04",
+      "seed": 7,
+      "fault": "stockout",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    }
+  ]
+}

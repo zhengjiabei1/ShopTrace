@@ -1,0 +1,277 @@
+{
+  "schema_version": "shoptrace-browser-catalog-v2-en-US",
+  "notice": "Sample products for local browser tasks. No checkout or payment.",
+  "products": [
+    {
+      "id": "h-city",
+      "name": "Sample Intercity Headphones",
+      "category": "headphones",
+      "price": 329,
+      "summary": "Black headphones. Check their connection details.",
+      "tags": [
+        "Headphones",
+        "Commute",
+        "Bluetooth"
+      ],
+      "facts": {
+        "color": "Black",
+        "wireless": true,
+        "connection": "Bluetooth wireless",
+        "weight_g": 210
+      },
+      "options": []
+    },
+    {
+      "id": "h-cloud",
+      "name": "Sample Cloud Headphones",
+      "category": "headphones",
+      "price": 269,
+      "summary": "Lightweight gray headphones with some specifications not provided.",
+      "tags": [
+        "Headphones",
+        "Gray",
+        "Lightweight"
+      ],
+      "facts": {
+        "color": "Gray",
+        "wireless": null,
+        "connection": null,
+        "weight_g": 180
+      },
+      "options": []
+    },
+    {
+      "id": "h-commute",
+      "name": "Sample Commute Headphones",
+      "category": "headphones",
+      "price": 289,
+      "summary": "Portable headphones with connection details on the product page.",
+      "tags": [
+        "Headphones",
+        "Commute",
+        "Black",
+        "Bluetooth"
+      ],
+      "facts": {
+        "color": "Black",
+        "wireless": true,
+        "connection": "Bluetooth wireless",
+        "weight_g": 195
+      },
+      "options": []
+    },
+    {
+      "id": "h-white",
+      "name": "Sample Clear Sky Headphones",
+      "category": "headphones",
+      "price": 199,
+      "summary": "White wireless headphones.",
+      "tags": [
+        "Headphones",
+        "White",
+        "Wireless"
+      ],
+      "facts": {
+        "color": "White",
+        "wireless": true,
+        "connection": "Bluetooth wireless",
+        "weight_g": 205
+      },
+      "options": []
+    },
+    {
+      "id": "t-bay",
+      "name": "Sample Blue Bay Thermos",
+      "category": "thermos",
+      "price": 79,
+      "summary": "Two capacities are available. Price depends on the selected variant.",
+      "tags": [
+        "Thermos",
+        "Blue",
+        "450ml",
+        "500ml"
+      ],
+      "facts": {
+        "color": "Blue",
+        "capacity_ml": 450,
+        "material": "Stainless steel"
+      },
+      "options": [
+        {
+          "id": "color",
+          "label": "Color",
+          "values": [
+            {
+              "value": "Blue",
+              "label": "Blue",
+              "price_delta": 0
+            },
+            {
+              "value": "Ivory",
+              "label": "Ivory",
+              "price_delta": 0
+            }
+          ]
+        },
+        {
+          "id": "capacity",
+          "label": "Capacity",
+          "values": [
+            {
+              "value": "450ml",
+              "label": "450ml",
+              "price_delta": 0
+            },
+            {
+              "value": "500ml",
+              "label": "500ml (+CNY 20)",
+              "price_delta": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-pink",
+      "name": "Sample Daily Sip Thermos",
+      "category": "thermos",
+      "price": 89,
+      "summary": "Pink 500 mL thermos.",
+      "tags": [
+        "Thermos",
+        "Pink",
+        "500ml"
+      ],
+      "facts": {
+        "color": "Pink",
+        "capacity_ml": 500,
+        "material": "Stainless steel"
+      },
+      "options": []
+    },
+    {
+      "id": "t-night",
+      "name": "Sample Nightfall Thermos",
+      "category": "thermos",
+      "price": 69,
+      "summary": "Black 500 mL thermos.",
+      "tags": [
+        "Thermos",
+        "Black",
+        "500ml"
+      ],
+      "facts": {
+        "color": "Black",
+        "capacity_ml": 500,
+        "material": "Stainless steel"
+      },
+      "options": []
+    },
+    {
+      "id": "p-lite",
+      "name": "Sample Light Travel Power Bank",
+      "category": "powerbank",
+      "price": 129,
+      "summary": "10,000 mAh power bank. Check its output specifications.",
+      "tags": [
+        "Power bank",
+        "Power bank",
+        "10000mAh",
+        "Black"
+      ],
+      "facts": {
+        "color": "Black",
+        "capacity_mah": 10000,
+        "max_output_w": 18,
+        "port": "USB-C",
+        "weight_g": 190
+      },
+      "options": []
+    },
+    {
+      "id": "p-fast",
+      "name": "Sample Swift Power Bank",
+      "category": "powerbank",
+      "price": 149,
+      "summary": "Portable black power bank.",
+      "tags": [
+        "Power bank",
+        "Power bank",
+        "10000mAh",
+        "Black",
+        "Fast charging"
+      ],
+      "facts": {
+        "color": "Black",
+        "capacity_mah": 10000,
+        "max_output_w": 20,
+        "port": "USB-C",
+        "weight_g": 205
+      },
+      "options": []
+    },
+    {
+      "id": "p-long",
+      "name": "Sample Long Haul Power Bank",
+      "category": "powerbank",
+      "price": 139,
+      "summary": "Gray high-capacity power bank.",
+      "tags": [
+        "Power bank",
+        "Power bank",
+        "20000mAh",
+        "Gray"
+      ],
+      "facts": {
+        "color": "Gray",
+        "capacity_mah": 20000,
+        "max_output_w": 22.5,
+        "port": "USB-C",
+        "weight_g": 340
+      },
+      "options": []
+    },
+    {
+      "id": "l-warm",
+      "name": "Sample Warm Page Lamp",
+      "category": "lamp",
+      "price": 129,
+      "summary": "Reading lamp with light and power details on the product page.",
+      "tags": [
+        "Lamp",
+        "Reading",
+        "Warm light",
+        "Dimmable",
+        "USB"
+      ],
+      "facts": {
+        "color": "Blue",
+        "dimmable": true,
+        "light": "Warm light",
+        "power_supply": "USB",
+        "brightness_levels": 3
+      },
+      "options": []
+    },
+    {
+      "id": "l-cool",
+      "name": "Sample Morning Lamp",
+      "category": "lamp",
+      "price": 89,
+      "summary": "White USB lamp.",
+      "tags": [
+        "Lamp",
+        "White light",
+        "USB"
+      ],
+      "facts": {
+        "color": "White",
+        "dimmable": false,
+        "light": "White light",
+        "power_supply": "USB",
+        "brightness_levels": 1
+      },
+      "options": []
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "procure-dev-06",
+  "query": "Buy one wireless, quiet keyboard; one black, quiet mouse; one wired, microphone headset. Keep the combined price at or below CNY 500. Inspect product details before adding items. Keep exactly one of each requested category and no other items. Open the shopping list and check quantities and the total before finishing.",
+  "model": {
+    "provider": "api",
+    "name": "deepseek-flash"
+  },
+  "runtime": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "page_memory",
+    "recovery": "baseline"
+  },
+  "benchmark_case": {
+    "id": "procure-dev-06",
+    "split": "development",
+    "seed": 7,
+    "fault": "stockout",
+    "catalog_fingerprint": "5381728fb3f280c2c1b77b5b8389292ae931375a0ba4cf5cd1062ddd41688ffd",
+    "dataset_fingerprint": "77d0f46fd5a2705e1256f4fb98725729e1c1dd1f7414b7d26ff080b9c18e07e2",
+    "benchmark_fingerprint": "e65943817c363c8e43d517f0b45ac5168d91be048fc2623a7babcb4da04f6414",
+    "benchmark": "shoptrace-procurement-v1"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8798/sandbox/procurement/?sid=ecdd9cd5614d5ea7de914c8a54dfc7fb",
+    "allowed_origins": [
+      "http://127.0.0.1:8798"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8798": [
+        "/sandbox/procurement/"
+      ]
+    }
+  },
+  "source_fingerprint": "b37ba1eb60d0e95099ff49b27f957f1ba3bd4d875ffbc28cafb4a21160d5298f",
+  "run_id": "aa0fa686b81b4bb8bd8cff9721cc96c0",
+  "source": "browser_model",
+  "created_at": "2026-10-26T11:31:46.161883+00:00",
+  "completed_at": "2026-10-26T11:32:33.965148+00:00",
+  "status": "completed",
+  "termination_reason": "agent_finished",
+  "steps": 26,
+  "model_calls": 26,
+  "elapsed_seconds": 47.796,
+  "usage": {
+    "input_tokens": 128828,
+    "output_tokens": 1120
+  },
+  "result": {
+    "benchmark": "shoptrace-procurement-v1",
+    "success": true,
+    "reason": "The products, quantities, and combined price meet the requirements.",
+    "evidence": [
+      {
+        "source": "visible_cart_dom",
+        "id": "pk01",
+        "qty": 1,
+        "cents": 17800,
+        "text": "⌨\nSHOPTRACE / Keyboard\nKeyboard\nAtlas Keyboard\nColor\nBlack\nConnection\nWireless\nQuiet\nYes\nMulti-device\nYes\nCompact\nNo\nStock\n8 available\n\nQuantity: 1\n\n−\n+\nRemove\nCNY 178.00\n\nCNY 178.00 each"
+      },
+      {
+        "source": "visible_cart_dom",
+        "id": "pm01",
+        "qty": 1,
+        "cents": 7600,
+        "text": "◉\nSHOPTRACE / Mouse\nMouse\nCove Mouse\nColor\nBlack\nConnection\nWireless\nQuiet\nYes\nMulti-device\nYes\nLightweight\nYes\nStock\n8 available\n\nQuantity: 1\n\n−\n+\nRemove\nCNY 76.00\n\nCNY 76.00 each"
+      },
+      {
+        "source": "visible_cart_dom",
+        "id": "ph06",
+        "qty": 1,
+        "cents": 6000,
+        "text": "♫\nSHOPTRACE / Headset\nHeadset\nPine Headset\nColor\nWhite\nConnection\nWired\nMicrophone\nYes\nLightweight\nYes\nStock\n8 available\n\nQuantity: 1\n\n−\n+\nRemove\nCNY 60.00\n\nCNY 60.00 each"
+      }
+    ],
+    "metrics": {
+      "duplicates": 0,
+      "duplicate_peak": 0,
+      "fault_triggered": true,
+      "add_attempts": 4,
+      "add_retries": 0,
+      "duplicate_adds": 0,
+      "uncertain_adds": 0,
+      "cart_checks": 2,
+      "inspected_products": 7,
+      "cart_count": 3,
+      "total_cents": 31400
+    },
+    "scope": "Checked against the session catalog, cart, and visible shopping list.",
+    "outcome_kind": "procurement_verified"
+  },
+  "error": null,
+  "started_at": "2026-10-26T11:31:46.169152+00:00",
+  "protocol_version": "shoptrace-procurement-v1",
+  "prompt_hash": "b6924aa7f79291efa40d39e49a746aecf409f4871e34d71637e8c822be6746b5",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "page_memory"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "memory_policy": {
+    "version": "observed-pages-v1",
+    "pages": 0,
+    "characters": 0,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "recovery_policy": {
+    "mode": "baseline",
+    "version": "visible-feedback-v1",
+    "automatic_actions": false
+  },
+  "source_unchanged": true,
+  "memory_stats": {
+    "pages": 13,
+    "characters": 9104,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "model_responses": 26
+}

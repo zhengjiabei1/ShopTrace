@@ -1,0 +1,89 @@
+{
+  "schema_version": "shoptrace.webagent.trajectory.v1",
+  "mode": "browser",
+  "task_id": "procure-dev-01",
+  "query": "Buy one wireless, multi-device, quiet keyboard; one wireless, quiet, lightweight mouse. Keep the combined price at or below CNY 350. Inspect product details before adding items. Keep exactly one of each requested category and no other items. Open the shopping list and check quantities and the total before finishing.",
+  "model": {
+    "provider": "api",
+    "name": "deepseek-flash"
+  },
+  "runtime": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512,
+    "context_mode": "page_memory",
+    "recovery": "verify"
+  },
+  "benchmark_case": {
+    "id": "procure-dev-01",
+    "split": "development",
+    "seed": 7,
+    "fault": "none",
+    "catalog_fingerprint": "5381728fb3f280c2c1b77b5b8389292ae931375a0ba4cf5cd1062ddd41688ffd",
+    "dataset_fingerprint": "77d0f46fd5a2705e1256f4fb98725729e1c1dd1f7414b7d26ff080b9c18e07e2",
+    "benchmark_fingerprint": "e65943817c363c8e43d517f0b45ac5168d91be048fc2623a7babcb4da04f6414",
+    "benchmark": "shoptrace-procurement-v1"
+  },
+  "browser": {
+    "start_url": "http://127.0.0.1:8798/sandbox/procurement/?sid=a02fb4b79e61468484eca9a5a042aa71",
+    "allowed_origins": [
+      "http://127.0.0.1:8798"
+    ],
+    "allowed_path_prefixes": {
+      "http://127.0.0.1:8798": [
+        "/sandbox/procurement/"
+      ]
+    }
+  },
+  "source_fingerprint": "0512a14d7bce4856d5a9e2b7fc76df5b86ee79c02ba43b6f38262bf65f6897da",
+  "run_id": "f973a497b8fd4060952ac16bdb5b2d7a",
+  "source": "browser_model",
+  "created_at": "2026-10-26T11:01:35.647506+00:00",
+  "completed_at": "2026-10-26T11:05:26.842349+00:00",
+  "status": "failed",
+  "termination_reason": "process_interrupted",
+  "steps": 4,
+  "model_calls": 5,
+  "elapsed_seconds": 0,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "result": {
+    "success": null,
+    "reason": "not_finished",
+    "benchmark": "shoptrace-procurement-v1"
+  },
+  "error": {
+    "kind": "infrastructure",
+    "message": "Process interrupted; task was not retried."
+  },
+  "started_at": "2026-10-26T11:01:35.662396+00:00",
+  "protocol_version": "shoptrace-procurement-v1",
+  "prompt_hash": "3aeff79d426f4a027ebaf16ab295d25173be4890bfd11cfa0a488787b8422bbc",
+  "tools_hash": "a11c1ba647d7ab314badeb36f83056495cc928840d0247e18eddfd42b3336ea4",
+  "playwright_version": "1.62.0",
+  "context_policy": {
+    "unit": "serialized_json_characters",
+    "max": 96000,
+    "overflow": "stop_without_truncation",
+    "mode": "page_memory"
+  },
+  "benchmark_scope": "local_synthetic_website",
+  "checkpoint_verified": false,
+  "memory_policy": {
+    "version": "observed-pages-v1",
+    "pages": 0,
+    "characters": 0,
+    "evicted_pages": 0,
+    "clipped_pages": 0,
+    "max_pages": 32,
+    "max_characters": 24000,
+    "max_page_characters": 1800
+  },
+  "recovery_policy": {
+    "mode": "verify",
+    "version": "visible-feedback-v1",
+    "automatic_actions": false
+  }
+}

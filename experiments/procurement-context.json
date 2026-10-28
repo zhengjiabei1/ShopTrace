@@ -1,0 +1,42 @@
+{
+  "schema_version": "shoptrace.procurement-plan.v1",
+  "name": "procurement-context",
+  "split": "development",
+  "benchmark": "shoptrace-procurement-v1",
+  "model": "deepseek-flash",
+  "budgets": {
+    "max_steps": 70,
+    "max_seconds": 180,
+    "max_output_tokens": 512
+  },
+  "cases": [
+    {
+      "task_id": "procure-dev-01",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "full_history"
+    },
+    {
+      "task_id": "procure-dev-01",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-dev-06",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "page_memory"
+    },
+    {
+      "task_id": "procure-dev-06",
+      "seed": 7,
+      "fault": "none",
+      "recovery": "verify",
+      "context_mode": "full_history"
+    }
+  ]
+}

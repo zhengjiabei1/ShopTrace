@@ -1,0 +1,145 @@
+{
+  "schema_version": "shoptrace.model-regression.v1",
+  "created_at": "2026-10-26T21:19:31.137467+00:00",
+  "status": "completed",
+  "base_commit": "d2f9fcc0739ddbda128290b0b5da67baa537aa42",
+  "model": "deepseek-flash",
+  "executor": "macOS 26.5 system Chrome 155.0.8059.85",
+  "design": {
+    "tasks": 6,
+    "repeats": 5,
+    "attempts": 30,
+    "budgets": {
+      "provider": "api",
+      "max_steps": 35,
+      "max_seconds": 180,
+      "max_output_tokens": 512,
+      "context_mode": "full_history"
+    },
+    "automatic_retries": 0
+  },
+  "results": {
+    "planned": 30,
+    "finished": 30,
+    "passes": 30,
+    "failures": 0,
+    "unknown": 0,
+    "coverage": 1.0,
+    "known_success": 1.0,
+    "model_calls": 190,
+    "input_tokens": 1078270,
+    "output_tokens": 10643,
+    "elapsed_seconds": 193.7738,
+    "screenshots": 190,
+    "collection_errors": 0,
+    "incomplete_submissions": 0,
+    "per_task": {
+      "browser-headphones-commute": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      },
+      "browser-headphones-unknown": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      },
+      "browser-lamp-adjustable": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      },
+      "browser-powerbank-spec": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      },
+      "browser-thermos-budget": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      },
+      "browser-thermos-variant": {
+        "attempts": 5,
+        "finished": 5,
+        "successes": 5,
+        "failures": 0,
+        "unknown_results": 0,
+        "success_rate_known": 1.0,
+        "result_coverage": 1.0
+      }
+    }
+  },
+  "history": {
+    "prior_six_task": {
+      "revision": "18bf9cc",
+      "attempts": 30,
+      "passes": 29,
+      "unknown": 1
+    },
+    "note": "The current tree rerun is a new stage; the model service may not pin the same weights."
+  },
+  "portal": {
+    "before": {
+      "attempts": 97,
+      "png_files": 1479
+    },
+    "after": {
+      "attempts": 127,
+      "png_files": 1669,
+      "manifest_files": 1930
+    },
+    "new_suite": "model-regression",
+    "new_attempts": 30,
+    "new_screenshots": 190,
+    "old_evidence_issues": 0
+  },
+  "cost_estimate": {
+    "method": "Known usage; peak all-input-cache-miss rate; not an invoice.",
+    "cny": 2.2417,
+    "usd": 0.3363,
+    "off_peak_cny": 1.1208,
+    "off_peak_usd": 0.1681
+  },
+  "tests": {
+    "core": {
+      "ran": 235,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 31.196,
+      "log": "docs/verification/mac-browser-suite-20261027.txt"
+    },
+    "portal": {
+      "ran": 6,
+      "failed": 0,
+      "seconds": 0.032,
+      "log": "docs/verification/mac-portal-suite-20261027.txt"
+    }
+  },
+  "limitations": [
+    "Thirty attempts are descriptive, not independent samples or a significance test.",
+    "The model service may have changed weights; the result is not a paired comparison with 18bf9cc.",
+    "The local synthetic store does not establish public-site performance.",
+    "The four new held-out attempts and this regression used macOS Chrome; the original browser build is unknown."
+  ]
+}

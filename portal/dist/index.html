@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ShopTrace evaluation reports, screenshots, and action traces.">
+  <title>ShopTrace · Evaluation report</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="report-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to report</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="ShopTrace report home">
+      <span class="brand-mark" aria-hidden="true">ST</span>
+      <span><strong>ShopTrace</strong><small>Browser tasks and run history</small></span>
+    </a>
+    <div class="top-actions"><span class="readonly"><i></i>Saved report</span><a class="button ghost" href="https://github.com/zhengjiabei1/shopping_agent" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow">SHOPTRACE / EVALUATION</p><h1 id="page-title">See the results.<br>Review the steps.</h1><p class="hero-description">Explore task results, screenshots, and actions to understand where runs succeed or fail.</p><div class="provenance"><span id="model-name">Awaiting results</span><span id="source-commit">Version unavailable</span><span id="report-date">—</span></div></div>
+      <aside class="live-card" aria-labelledby="live-title"><span class="small-label">Static replay</span><div class="live-heading"><h2 id="live-title">Review saved runs</h2><span id="live-badge" class="badge">Offline viewer</span></div><p id="live-description">This page replays saved runs. Running new tasks requires the local workbench; see the deployment guide.</p><a id="live-link" class="button primary" hidden target="_blank" rel="noopener noreferrer">Open live workbench <span aria-hidden="true">↗</span></a><a id="deployment-link" class="text-link" href="https://github.com/zhengjiabei1/shopping_agent/blob/main/docs/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer">Deployment guide →</a></aside>
+    </section>
+
+    <nav class="report-links" aria-label="Project report"><a href="https://github.com/zhengjiabei1/shopping_agent/blob/main/docs/EVALUATION.md" target="_blank" rel="noopener noreferrer">Project report ↗</a></nav>
+
+    <div class="scope-note"><span aria-hidden="true">i</span><p><strong>Scope</strong>Runs use a synthetic store. Model, Script, and Mock API results are reported separately.</p></div>
+
+    <section class="report-workspace" aria-labelledby="report-title">
+      <div class="section-heading"><div><p class="eyebrow">RESULTS</p><h2 id="report-title">Evaluation overview</h2></div><a id="archive-link" class="button secondary" hidden target="_blank" rel="noopener noreferrer">Download results ↓</a></div>
+      <div id="suite-tabs" class="suite-tabs" role="tablist" aria-label="Evaluation stage"></div>
+      <div id="suite-intro" class="suite-intro" role="status" aria-live="polite"></div>
+      <div id="metrics" class="metrics" aria-label="Evaluation metrics"></div>
+      <section id="configuration-comparison" class="configuration-comparison" aria-label="Results by configuration" hidden></section>
+      <div class="controls"><div class="control-fields"><label>Task<select id="task-filter"><option value="">All tasks</option></select></label><label>Setting<select id="arm-filter"><option value="">All settings</option></select></label><label hidden>Fault<select id="fault-filter"><option value="">All faults</option></select></label><label hidden>Seed<select id="seed-filter"><option value="">All seeds</option></select></label><label>Outcome<select id="result-filter"><option value="">All outcomes</option><option value="passed">Passed</option><option value="failed">Failed</option><option value="unknown">Unknown / incomplete</option></select></label></div><span id="filter-count" class="filter-count"></span></div>
+      <div class="overview-grid"><section class="panel task-summary" aria-labelledby="task-summary-title"><div class="panel-heading"><h3 id="task-summary-title">By task</h3><span class="tiny-label">Passed / known / total</span></div><div id="task-bars"></div></section><section class="panel attempts-panel" aria-labelledby="attempts-title"><div class="panel-heading"><h3 id="attempts-title">All attempts</h3><span id="attempts-count" class="tiny-label"></span></div><div id="attempt-list" class="attempt-list"></div></section></div>
+    </section>
+
+    <section id="evidence" class="evidence-section" aria-labelledby="evidence-title">
+      <div class="section-heading"><div><p class="eyebrow">BROWSER TRACE</p><h2 id="evidence-title">Screenshots and actions</h2></div><span id="selected-outcome" class="badge pending">No selection</span></div>
+      <div id="run-summary" class="run-summary"></div>
+      <div class="evidence-grid"><div class="browser-frame"><div class="browser-chrome"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span id="page-address" class="address">Waiting for a page</span><button id="expand-image" class="icon-button" type="button" title="Enlarge screenshot" aria-label="Enlarge screenshot" disabled>↗</button></div><div class="screenshot-stage"><img id="screenshot" alt="Saved page screenshot" hidden><div id="screenshot-empty" class="empty-screenshot"><span aria-hidden="true">▧</span><strong>Select a run to view its screenshots</strong><p>Use the timeline to review each step.</p></div></div><div class="screenshot-footer"><span id="screenshot-caption">No screenshot</span><span>Saved screenshot</span></div></div><aside class="panel inspector"><div class="inspector-tabs" role="tablist" aria-label="Record type"><button id="dom-tab" role="tab" aria-selected="true" aria-controls="dom-panel">Page text (original)</button><button id="action-tab" role="tab" aria-selected="false" aria-controls="action-panel">Model action</button></div><div id="dom-panel" role="tabpanel" aria-labelledby="dom-tab"><pre id="dom-text">No page observation loaded.</pre></div><div id="action-panel" role="tabpanel" aria-labelledby="action-tab" hidden><p class="inspector-label">Action and error at this step</p><pre id="action-text">No action recorded.</pre><div id="step-notes" class="step-notes" hidden></div></div></aside></div>
+      <div class="trace-controls"><button id="previous-step" class="button secondary" type="button" disabled>← Previous</button><label class="step-slider">Step<input id="step-range" type="range" min="0" max="0" value="0" disabled aria-label="Select a saved step"></label><span id="step-count" class="step-count">0 / 0</span><button id="next-step" class="button secondary" type="button" disabled>Next →</button></div>
+      <div id="result-detail" class="result-detail"></div>
+    </section>
+    <section id="no-data" class="panel no-data" hidden><p class="eyebrow">NO DATA</p><h2>Results are being prepared</h2><p>Completed runs will appear here with screenshots, actions, and outcomes.</p></section>
+    <footer><p><strong>ShopTrace</strong> Run history and evaluation results.</p><p id="footer-note">Browse by task. Replay each step.</p></footer>
+  </main>
+  <dialog id="image-dialog"><div class="dialog-heading"><h2>Page screenshot</h2><button id="close-dialog" class="icon-button" type="button" aria-label="Close screenshot">×</button></div><img id="dialog-image" alt="Enlarged page screenshot"></dialog>
+</body>
+</html>

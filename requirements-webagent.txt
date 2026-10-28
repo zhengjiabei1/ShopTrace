@@ -1,0 +1,3 @@
+# Optional browser-agent dependencies; no CUDA or training packages.
+-r requirements.txt
+playwright==1.62.0

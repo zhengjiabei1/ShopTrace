@@ -1,0 +1,16 @@
+id,success,notes
+Cambridge Dictionary--0,true,UK/US IPA and definitions match the entry.
+Cambridge Dictionary--1,true,"IPA, definition, and sample sentence match."
+Cambridge Dictionary--2,true,UK/US pronunciation and definitions match.
+Cambridge Dictionary--6,true,Chinese and French translations match.
+Cambridge Dictionary--8,true,Three distinct senses of dog listed.
+Huggingface--3,true,Filtered by cc-by-sa-4.0 and sorted by most likes; top model reported.
+Huggingface--5,true,"Recipe-generation model name, size, and tensor type match."
+Huggingface--13,false,No answer; stopped with no_progress after repeated clicks.
+Huggingface--14,true,Pro price and listed features match.
+Apple--1,false,No answer; exhausted 50 steps without completing the compatibility check.
+Apple--6,true,Four AirPods models and prices reported.
+Apple--12,true,Two Apple repair options reported.
+ArXiv--6,false,No answer; stopped with no_progress on the search flow.
+ArXiv--11,false,No answer; three consecutive invalid actions.
+Wolfram Alpha--15,false,No answer; stopped with no_progress.

@@ -1,0 +1,16 @@
+id,success,notes
+Wolfram Alpha--1,false,No answer; no_progress after repeated input attempts.
+Wolfram Alpha--4,false,No answer; no_progress after repeated input attempts.
+Wolfram Alpha--5,unknown,Finished blocked; the page showed only the input and no solution content.
+Wolfram Alpha--11,false,No answer; no_progress after repeated input attempts.
+GitHub--3,true,"Team 2GB vs Enterprise 50GB, 48GB difference reported."
+GitHub--8,false,No answer; no_progress.
+GitHub--10,true,"Copilot Pro $10/month, $120/year, features listed."
+GitHub--7,false,No answer; no_progress.
+ArXiv--10,false,No answer; three consecutive invalid actions.
+Allrecipes--7,unknown,Site returned an access-issue page; no recipe content.
+Allrecipes--9,unknown,Site returned an access-issue page; no recipe content.
+Allrecipes--13,unknown,Site returned an access-issue page; no nutrition label.
+Coursera--2,false,No answer; no_progress.
+Coursera--5,false,No answer; 50-step budget exhausted.
+Coursera--11,false,No answer; three consecutive invalid actions.

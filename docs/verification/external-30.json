@@ -1,0 +1,707 @@
+{
+  "schema_version": "shoptrace.external-evaluation.v1",
+  "date": "2026-10-28",
+  "model": "deepseek-flash",
+  "provider": "api",
+  "context_mode": "latest_observation",
+  "max_steps": 50,
+  "max_seconds": 240,
+  "manifest": "benchmarks/external/webvoyager-readonly-30.json",
+  "grades": "benchmarks/external/grades-all-30.csv",
+  "summary": {
+    "attempted": 30,
+    "passed": 12,
+    "failed": 14,
+    "unknown": 4,
+    "known_success_rate": 0.4615,
+    "wilson_95": [
+      0.2876,
+      0.6454
+    ]
+  },
+  "runs": [
+    {
+      "task_id": "Cambridge Dictionary--0",
+      "run_id": "e15fe99c59f540f2b05e845502158946",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 10.4234,
+      "usage": {
+        "input_tokens": 32909,
+        "output_tokens": 282
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Cambridge Dictionary page for 'sustainability' (noun [U]) shows UK pronunciation /səˌsteɪ.nəˈbɪl.ə.ti/ and US /səˌsteɪ.nəˈbɪl.ə.t̬i/",
+          "Definition 1: 'the quality of being able to continue over a period of time'",
+          "C2 ENVIRONMENT definition: 'the quality of causing little or no damage to the environment and therefore able to continue for a long time'"
+        ]
+      },
+      "grade": "true",
+      "note": "UK/US IPA and definitions match the entry."
+    },
+    {
+      "task_id": "Cambridge Dictionary--1",
+      "run_id": "5f741a9ca0404408bc857d74cd12b0aa",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 8.4157,
+      "usage": {
+        "input_tokens": 31778,
+        "output_tokens": 248
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Pronunciation: UK /ˌser.ənˈdɪp.ə.ti/ US /ˌser.ənˈdɪp.ə.t̬i/",
+          "Definition: the fact of finding interesting or valuable things by chance",
+          "Sample sentence: There is a real element of serendipity in archaeology."
+        ]
+      },
+      "grade": "true",
+      "note": "IPA, definition, and sample sentence match."
+    },
+    {
+      "task_id": "Cambridge Dictionary--2",
+      "run_id": "b09ad9bfdedd41828d358e9339301aeb",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 9.1624,
+      "usage": {
+        "input_tokens": 32576,
+        "output_tokens": 294
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "UK pronunciation: /juːˈbɪk.wɪ.təs/",
+          "US pronunciation: /juːˈbɪk.wə.t̬əs/ (American Dictionary: /jʊˈbɪk·wɪ·t̬əs, ju-/)",
+          "Definition: seeming to be everywhere (US: found or existing everywhere)",
+          "UK example: Leather is very much in fashion this season, as is the ubiquitous denim.",
+          "US example: The eel grass limpet used to be ubiquitous on the New England coast."
+        ]
+      },
+      "grade": "true",
+      "note": "UK/US pronunciation and definitions match."
+    },
+    {
+      "task_id": "Cambridge Dictionary--6",
+      "run_id": "27e8c270b0a940e491899f22e91a238f",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 8.2651,
+      "usage": {
+        "input_tokens": 32945,
+        "output_tokens": 238
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Translations of sustainability — in Chinese (Traditional): 可持續性, （可）持續性，永續性…",
+          "in Chinese (Simplified): 可持续性, （可）持续性，永续性…",
+          "in French: durabilité, viabilité…"
+        ]
+      },
+      "grade": "true",
+      "note": "Chinese and French translations match."
+    },
+    {
+      "task_id": "Cambridge Dictionary--8",
+      "run_id": "d3b8e7f123c245fbaf12e1614f9ca48e",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 6,
+      "model_calls": 6,
+      "elapsed_seconds": 14.7693,
+      "usage": {
+        "input_tokens": 46518,
+        "output_tokens": 345
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "dog noun [C] (ANIMAL): a common animal with four legs, especially kept by people as a pet or to hunt or guard things",
+          "dog noun [C] (PERSON): slang, a man who is unpleasant or not to be trusted (e.g., 'the dirty dog')",
+          "dog verb [T] (FOLLOW): to follow someone closely and continuously (e.g., 'Reporters dogged him for answers')"
+        ]
+      },
+      "grade": "true",
+      "note": "Three distinct senses of dog listed."
+    },
+    {
+      "task_id": "Huggingface--3",
+      "run_id": "8ed98394683e492295823d5c1e9e6598",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 9,
+      "model_calls": 9,
+      "elapsed_seconds": 15.7672,
+      "usage": {
+        "input_tokens": 98916,
+        "output_tokens": 430
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Filtered by license cc-by-sa-4.0 and sorted by Most likes",
+          "Top result: nlpaueb/legal-bert-base-uncased (Fill-Mask, 1.13M downloads, 335 likes)",
+          "Second result airesearch/wav2vec2-large-xlsr-53-th has 39 likes"
+        ]
+      },
+      "grade": "true",
+      "note": "Filtered by cc-by-sa-4.0 and sorted by most likes; top model reported."
+    },
+    {
+      "task_id": "Huggingface--5",
+      "run_id": "111d2defa0ed47d2b8b50516e430c6de",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 5,
+      "model_calls": 5,
+      "elapsed_seconds": 11.0794,
+      "usage": {
+        "input_tokens": 35698,
+        "output_tokens": 297
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Model name: flax-community/t5-recipe-generation (Chef Transformer, T5)",
+          "Model size: 0.2B params",
+          "Tensor type: F32",
+          "Task: Text Generation / recipe-generation"
+        ]
+      },
+      "grade": "true",
+      "note": "Recipe-generation model name, size, and tensor type match."
+    },
+    {
+      "task_id": "Huggingface--13",
+      "run_id": "6030b8ade31b42ea8570e5bb6fb12410",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 17,
+      "model_calls": 17,
+      "elapsed_seconds": 32.9572,
+      "usage": {
+        "input_tokens": 204169,
+        "output_tokens": 658
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; stopped with no_progress after repeated clicks."
+    },
+    {
+      "task_id": "Huggingface--14",
+      "run_id": "82d539453ac34bce9dd4c2ad17ea404b",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 10.8046,
+      "usage": {
+        "input_tokens": 30094,
+        "output_tokens": 230
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "PRO Account: $9/month",
+          "10× private storage capacity",
+          "2× public storage capacity",
+          "$2 of included inference credits monthly",
+          "8× ZeroGPU quota and highest queue priority",
+          "Host ZeroGPU, Gradio & Docker Spaces; Spaces Dev Mode; Personal blog publishing; Dataset Viewer for private datasets; PRO badge"
+        ]
+      },
+      "grade": "true",
+      "note": "Pro price and listed features match."
+    },
+    {
+      "task_id": "Apple--1",
+      "run_id": "25dcdbf2850a48a4bf09228cd0c73a06",
+      "status": "budget_exceeded",
+      "termination_reason": "budget_exceeded",
+      "steps": 50,
+      "model_calls": 50,
+      "elapsed_seconds": 59.039,
+      "usage": {
+        "input_tokens": 379406,
+        "output_tokens": 1967
+      },
+      "error": {
+        "kind": "budget",
+        "message": "Browser action/model-call budget exhausted."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; exhausted 50 steps without completing the compatibility check."
+    },
+    {
+      "task_id": "Apple--6",
+      "run_id": "af5b6f153b8f44d3995ccb23a59196f3",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 3,
+      "model_calls": 3,
+      "elapsed_seconds": 8.656,
+      "usage": {
+        "input_tokens": 27295,
+        "output_tokens": 190
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Apple AirPods page lists AirPods 5 (from $129), AirPods 5 with Wireless Charging Case ($149), AirPods Pro 3 ($249), and AirPods Max 2 ($549).",
+          "The page's compare section shows 4 distinct AirPods models currently available."
+        ]
+      },
+      "grade": "true",
+      "note": "Four AirPods models and prices reported."
+    },
+    {
+      "task_id": "Apple--12",
+      "run_id": "ac02d37746a64b959db3aaf430b2b80d",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 3,
+      "model_calls": 3,
+      "elapsed_seconds": 6.6657,
+      "usage": {
+        "input_tokens": 20242,
+        "output_tokens": 182
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Apple Repair and Service: find an Apple-certified repair performed by trusted experts using genuine Apple parts",
+          "Battery replacement: visit an Apple Store or Apple Authorized Service Provider to receive a genuine Apple battery",
+          "Apple-certified screen repairs are performed by trusted experts who use genuine Apple parts"
+        ]
+      },
+      "grade": "true",
+      "note": "Two Apple repair options reported."
+    },
+    {
+      "task_id": "ArXiv--6",
+      "run_id": "ca899dcc286e4be29751617478c0a1fb",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 16,
+      "model_calls": 16,
+      "elapsed_seconds": 41.6148,
+      "usage": {
+        "input_tokens": 139848,
+        "output_tokens": 625
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; stopped with no_progress on the search flow."
+    },
+    {
+      "task_id": "ArXiv--11",
+      "run_id": "62da0cdaa1554a9583cb211945cc8956",
+      "status": "failed",
+      "termination_reason": "execution_error",
+      "steps": 5,
+      "model_calls": 5,
+      "elapsed_seconds": 9.3098,
+      "usage": {
+        "input_tokens": 20386,
+        "output_tokens": 192
+      },
+      "error": {
+        "kind": "model",
+        "message": "Three consecutive browser decisions were invalid."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; three consecutive invalid actions."
+    },
+    {
+      "task_id": "Wolfram Alpha--15",
+      "run_id": "2d01da1fe41d4053a4e7e3c8addd051c",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 22,
+      "model_calls": 22,
+      "elapsed_seconds": 47.8315,
+      "usage": {
+        "input_tokens": 65223,
+        "output_tokens": 851
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; stopped with no_progress."
+    },
+    {
+      "task_id": "Wolfram Alpha--1",
+      "run_id": "12cf138be8034adfbddd86e818e3acc1",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 26,
+      "model_calls": 26,
+      "elapsed_seconds": 60.4858,
+      "usage": {
+        "input_tokens": 79752,
+        "output_tokens": 992
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress after repeated input attempts."
+    },
+    {
+      "task_id": "Wolfram Alpha--4",
+      "run_id": "6994ae2d73dd4f7880a51ea8358550de",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 27,
+      "model_calls": 27,
+      "elapsed_seconds": 63.5764,
+      "usage": {
+        "input_tokens": 83889,
+        "output_tokens": 1026
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress after repeated input attempts."
+    },
+    {
+      "task_id": "Wolfram Alpha--5",
+      "run_id": "41437bcc06e04f268cd75731eb64b930",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 30,
+      "model_calls": 30,
+      "elapsed_seconds": 72.435,
+      "usage": {
+        "input_tokens": 100366,
+        "output_tokens": 1201
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "blocked",
+        "evidence": [
+          "Wolfram|Alpha page shows only the input y''(z) + sin(y(z)) = 0 and no solution result",
+          "Repeated Compute input clicks and waits did not load any result content",
+          "Page shows only navigation/footer text; no solution is visible"
+        ]
+      },
+      "grade": "unknown",
+      "note": "Finished blocked; the page showed only the input and no solution content."
+    },
+    {
+      "task_id": "Wolfram Alpha--11",
+      "run_id": "76f0c3b0963544eea2152cb477bc36e0",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 22,
+      "model_calls": 22,
+      "elapsed_seconds": 50.3212,
+      "usage": {
+        "input_tokens": 66930,
+        "output_tokens": 857
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress after repeated input attempts."
+    },
+    {
+      "task_id": "GitHub--3",
+      "run_id": "3952217614fa49138ac206128a1f48bc",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 3,
+      "model_calls": 3,
+      "elapsed_seconds": 6.1779,
+      "usage": {
+        "input_tokens": 23976,
+        "output_tokens": 155
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "GitHub Packages: Team = 2GB",
+          "GitHub Packages: Enterprise = 50GB",
+          "Difference = 48GB more"
+        ]
+      },
+      "grade": "true",
+      "note": "Team 2GB vs Enterprise 50GB, 48GB difference reported."
+    },
+    {
+      "task_id": "GitHub--8",
+      "run_id": "0cf8909508d94e7995744f879ece6132",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 8,
+      "model_calls": 8,
+      "elapsed_seconds": 10.9564,
+      "usage": {
+        "input_tokens": 85813,
+        "output_tokens": 312
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress."
+    },
+    {
+      "task_id": "GitHub--10",
+      "run_id": "334a1310c7364b95a9b255544672aa9f",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 8.2442,
+      "usage": {
+        "input_tokens": 36854,
+        "output_tokens": 254
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "completed",
+        "evidence": [
+          "Copilot Pro (Individual) is $10 per month, i.e. $120 per year",
+          "Pro includes unlimited inline suggestions, agent mode, code review, cloud agent, Copilot CLI, Copilot Spaces, and access to many models",
+          "Pro includes $10/month base AI credits plus $5/month flex allotment",
+          "Pro does not include enterprise-grade security, IP indemnity, user management, usage metrics, or SAML SSO"
+        ]
+      },
+      "grade": "true",
+      "note": "Copilot Pro $10/month, $120/year, features listed."
+    },
+    {
+      "task_id": "GitHub--7",
+      "run_id": "e12f4e50ac0e46bb8d0001d260ac711d",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 8,
+      "model_calls": 8,
+      "elapsed_seconds": 11.6583,
+      "usage": {
+        "input_tokens": 85845,
+        "output_tokens": 312
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress."
+    },
+    {
+      "task_id": "ArXiv--10",
+      "run_id": "78fcd60719c64eb98748fb7f0d0aa051",
+      "status": "failed",
+      "termination_reason": "execution_error",
+      "steps": 30,
+      "model_calls": 30,
+      "elapsed_seconds": 55.5728,
+      "usage": {
+        "input_tokens": 330245,
+        "output_tokens": 1170
+      },
+      "error": {
+        "kind": "model",
+        "message": "Three consecutive browser decisions were invalid."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; three consecutive invalid actions."
+    },
+    {
+      "task_id": "Allrecipes--7",
+      "run_id": "9d391b3581694e569d1216cdf5adecc7",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 11.6039,
+      "usage": {
+        "input_tokens": 6157,
+        "output_tokens": 204
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "blocked",
+        "evidence": [
+          "allrecipes.com shows an access-issue page: 'If you are a reader experiencing an access issue, please contact support@people.inc.'",
+          "No recipe content, ingredients, or preparation steps are visible on the page."
+        ]
+      },
+      "grade": "unknown",
+      "note": "Site returned an access-issue page; no recipe content."
+    },
+    {
+      "task_id": "Allrecipes--9",
+      "run_id": "d79fcfe2789341d287f3c5867de4f4d5",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 11.1825,
+      "usage": {
+        "input_tokens": 6205,
+        "output_tokens": 203
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "blocked",
+        "evidence": [
+          "allrecipes.com shows an access-issue page: 'If you are a reader experiencing an access issue, please contact support@people.inc.'",
+          "No recipe content, ingredients, or times are visible on the page."
+        ]
+      },
+      "grade": "unknown",
+      "note": "Site returned an access-issue page; no recipe content."
+    },
+    {
+      "task_id": "Allrecipes--13",
+      "run_id": "2b1da8519af9434bbc7311493f147af6",
+      "status": "completed",
+      "termination_reason": "agent_finished",
+      "steps": 4,
+      "model_calls": 4,
+      "elapsed_seconds": 12.6269,
+      "usage": {
+        "input_tokens": 6209,
+        "output_tokens": 188
+      },
+      "error": null,
+      "finish": {
+        "type": "finish",
+        "reason": "blocked",
+        "evidence": [
+          "Allrecipes page shows an access issue message instead of site content.",
+          "No recipe search, reviews, or nutrition label are available on the visible page."
+        ]
+      },
+      "grade": "unknown",
+      "note": "Site returned an access-issue page; no nutrition label."
+    },
+    {
+      "task_id": "Coursera--2",
+      "run_id": "ab5ef562422c4ed1b3ba4f6c12a0fce6",
+      "status": "budget_exceeded",
+      "termination_reason": "no_progress",
+      "steps": 10,
+      "model_calls": 10,
+      "elapsed_seconds": 23.912,
+      "usage": {
+        "input_tokens": 111075,
+        "output_tokens": 408
+      },
+      "error": {
+        "kind": "budget",
+        "message": "No visible progress after repeated actions."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; no_progress."
+    },
+    {
+      "task_id": "Coursera--5",
+      "run_id": "77e750c2d8074a94ab5b48f5cfaa01df",
+      "status": "budget_exceeded",
+      "termination_reason": "budget_exceeded",
+      "steps": 50,
+      "model_calls": 50,
+      "elapsed_seconds": 120.8106,
+      "usage": {
+        "input_tokens": 532223,
+        "output_tokens": 2128
+      },
+      "error": {
+        "kind": "budget",
+        "message": "Browser action/model-call budget exhausted."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; 50-step budget exhausted."
+    },
+    {
+      "task_id": "Coursera--11",
+      "run_id": "30cd7ec6437b47c2ae39fe91425fd5fd",
+      "status": "failed",
+      "termination_reason": "execution_error",
+      "steps": 8,
+      "model_calls": 8,
+      "elapsed_seconds": 16.8663,
+      "usage": {
+        "input_tokens": 94974,
+        "output_tokens": 329
+      },
+      "error": {
+        "kind": "model",
+        "message": "Three consecutive browser decisions were invalid."
+      },
+      "finish": null,
+      "grade": "false",
+      "note": "No answer; three consecutive invalid actions."
+    }
+  ]
+}
