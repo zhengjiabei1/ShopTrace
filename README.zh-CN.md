@@ -82,7 +82,7 @@ benchmarks/    外部基准清单和只读切片
 tests/         单元测试和浏览器测试
 ```
 
-架构见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)，评测见 [docs/EVALUATION.md](docs/EVALUATION.md)，外部基准见 [docs/EXTERNAL_BENCHMARK.md](docs/EXTERNAL_BENCHMARK.md)，运行与部署见 [docs/RUNNING.md](docs/RUNNING.md)、[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
+架构见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)，评测见 [docs/EVALUATION.md](docs/EVALUATION.md)，外部基准见 [docs/EXTERNAL_BENCHMARK.md](docs/EXTERNAL_BENCHMARK.md)，失败分类见 [docs/FAILURE_TAXONOMY.zh-CN.md](docs/FAILURE_TAXONOMY.zh-CN.md)，运行与部署见 [docs/RUNNING.md](docs/RUNNING.md)、[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
 实现和文字整理使用了 AI 辅助。
 

@@ -7,6 +7,7 @@
 - 技术架构：[ARCHITECTURE.md](ARCHITECTURE.md)
 - 评测报告：[EVALUATION.md](EVALUATION.md)
 - 外部任务协议：[EXTERNAL_BENCHMARK.md](EXTERNAL_BENCHMARK.md)
+- 失败分类：[FAILURE_TAXONOMY.zh-CN.md](FAILURE_TAXONOMY.zh-CN.md)
 
 ## 项目是什么
 

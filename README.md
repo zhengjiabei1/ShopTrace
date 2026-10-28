@@ -82,7 +82,7 @@ benchmarks/    external benchmark manifest and read-only slice
 tests/         unit and browser tests
 ```
 
-Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Evaluation details: [docs/EVALUATION.md](docs/EVALUATION.md). External benchmark: [docs/EXTERNAL_BENCHMARK.md](docs/EXTERNAL_BENCHMARK.md). Running and deployment: [docs/RUNNING.md](docs/RUNNING.md), [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Evaluation details: [docs/EVALUATION.md](docs/EVALUATION.md). External benchmark: [docs/EXTERNAL_BENCHMARK.md](docs/EXTERNAL_BENCHMARK.md). Failure taxonomy: [docs/FAILURE_TAXONOMY.md](docs/FAILURE_TAXONOMY.md). Running and deployment: [docs/RUNNING.md](docs/RUNNING.md), [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 AI assistants were used for implementation and copy editing.
 

@@ -54,7 +54,7 @@ Thirty read-only tasks from WebVoyager, across eight sites, run with the same br
 
 The clean-site subset is the better signal for agent capability. The full set includes Allrecipes, which returned an access-issue page, and GitHub/Coursera, which lost CDN assets under the origin allowlist. Four unknown results are environmental: three Allrecipes pages and one Wolfram result area that never rendered.
 
-The slice is read-only, manually graded, and selected from the public WebVoyager task set. It is not leaderboard-compatible.
+The slice is read-only, manually graded, and selected from the public WebVoyager task set. It is not leaderboard-compatible. See [FAILURE_TAXONOMY.md](FAILURE_TAXONOMY.md) for examples by category.
 
 ## Failure notes
 

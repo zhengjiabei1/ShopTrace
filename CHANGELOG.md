@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added a failure taxonomy for the external slice.
+
 ## 1.0
 
 - Added the 30-task read-only WebVoyager slice, the 15-task clean-site pilot, the remaining complement, and manual grade files.
